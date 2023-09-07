@@ -56,21 +56,22 @@ export function NavbarLogin() {
   return (
     <NavigationMenu className="pt-4">
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <Link href="/home" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <div className="grid w-full gap-4">
-          <div className="flex flex-col space-y-1.5">
-            <div className="flex justify-end">
-              <NavigationMenuItem>
-                  <Button className="text-green-500 font-bold" variant={"ghostSignin"}>Sign in</Button>
-              </NavigationMenuItem>
-            </div>
-          </div>
+        <div className="flex justify-between items-center">
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href={"/login"} legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                <p className="text-green-500 font-bold">Sign In</p>
+              </NavigationMenuLink>
+            </Link>
+            {/* <Link className="text-green-500 font-bold" href={"/login"} >Sign In</Link> */}
+          </NavigationMenuItem>
         </div>
       </NavigationMenuList>
     </NavigationMenu>
