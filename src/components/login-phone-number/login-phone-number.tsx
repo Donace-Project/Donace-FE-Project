@@ -18,6 +18,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import Link from "next/link"
+import { Metadata } from "next";
 
 const preventMinus = (e) => {
   if (e.code === 'Minus') {
@@ -36,6 +37,10 @@ const preventPasteNegative = (e) => {
 
 
 // document.getElementById('phonenumber').addEventListener('keypress', test_fn);
+
+export const metadata: Metadata = {
+  title: 'Donace Sign In'
+}
 
 export function LoginPhoneNumber() {
   return (

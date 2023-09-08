@@ -54,27 +54,41 @@ import { Button } from "../ui/button"
 
 export function NavbarLogin() {
   return (
-    <NavigationMenu className="pt-4">
-      <NavigationMenuList>
-        <div className="flex justify-between items-center">
-          <NavigationMenuItem>
-            <Link href="/" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href={"/login"} legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                <p className="text-green-500 font-bold">Sign In</p>
-              </NavigationMenuLink>
-            </Link>
-            {/* <Link className="text-green-500 font-bold" href={"/login"} >Sign In</Link> */}
-          </NavigationMenuItem>
+    <div className="h-full flex justify-between items-center my-5">
+      <div className="items-center flex m-[0px]-[-4px] p-[4px]-[10px]-[4px]-[4px]">
+        <Link href={"/"} className="ml-8 inline">
+          <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
+        </Link>
+      </div>
+      <Button variant="ghostSignin" className="mr-[1.5vh]">
+        <div>
+          <Link href={"/login"} legacyBehavior passHref>
+            <p className="text-green-500 font-bold">Sign In</p>
+          </Link>
         </div>
-      </NavigationMenuList>
-    </NavigationMenu>
+      </Button>
+    </div>
+    // <NavigationMenu className="pt-4">
+    //   <NavigationMenuList>
+    //     <div className="flex justify-between items-center">
+    //       <NavigationMenuItem>
+    //         <Link href="/" legacyBehavior passHref>
+    //           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+    //             <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
+    //           </NavigationMenuLink>
+    //         </Link>
+    //       </NavigationMenuItem>
+    //       <NavigationMenuItem>
+    //         <Link href={"/login"} legacyBehavior passHref>
+    //           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+    //             <p className="text-green-500 font-bold">Sign In</p>
+    //           </NavigationMenuLink>
+    //         </Link>
+    //         {/* <Link className="text-green-500 font-bold" href={"/login"} >Sign In</Link> */}
+    //       </NavigationMenuItem>
+    //     </div>
+    //   </NavigationMenuList>
+    // </NavigationMenu>
   )
 }
 

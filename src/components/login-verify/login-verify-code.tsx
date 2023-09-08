@@ -15,7 +15,11 @@ import { Input } from "@/components/ui/input"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faPaste } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
-import { Badge } from "../ui/badge"
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Donace Sign In'
+}
 
 export function LoginVerify() {
   const [inputs, setInputs] = React.useState(["", "", "", "", "", ""]);

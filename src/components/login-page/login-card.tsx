@@ -16,6 +16,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faMobile } from '@fortawesome/free-solid-svg-icons'
 import Link from "next/link"
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Donace Sign In'
+}
 
 export function LoginFormCard() {
   return (
