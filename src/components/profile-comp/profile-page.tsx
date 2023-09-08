@@ -73,7 +73,7 @@ export function ProfilePage() {
                                         <div className="mt-[1rem]" id="bottom-action">
                                             <div id="block-action" className="inline-block p-[0px]">
                                                 <Link href={"/"}>
-                                                    View Past
+                                                    View Past.
                                                 </Link>
                                             </div>
                                         </div>
