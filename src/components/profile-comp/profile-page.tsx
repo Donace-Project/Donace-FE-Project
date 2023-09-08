@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export function ProfilePage() {
     return (
-        <div className="relative flex flex-col min-h-[100vh]" id="profile-content-container">
+        <div className="relative flex flex-col min-h-[100vh] bg-white" id="profile-content-container">
             <div className="pb-8" id="profile-bio is me">
                 <div className="p-4 w-full max-w-[650px] m-auto">
                     <div className="pr-0 pb-8 pl-0 pt-8 block text-center">
