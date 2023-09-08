@@ -6,51 +6,10 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 // import { Icons } from "@/components/icons"
 import {
-  NavigationMenu,
-  NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Button } from "../ui/button"
 
-// const components: { title: string; href: string; description: string }[] = [
-//   {
-//     title: "Alert Dialog",
-//     href: "/docs/primitives/alert-dialog",
-//     description:
-//       "A modal dialog that interrupts the user with important content and expects a response.",
-//   },
-//   {
-//     title: "Hover Card",
-//     href: "/docs/primitives/hover-card",
-//     description:
-//       "For sighted users to preview content available behind a link.",
-//   },
-//   {
-//     title: "Progress",
-//     href: "/docs/primitives/progress",
-//     description:
-//       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-//   },
-//   {
-//     title: "Scroll-area",
-//     href: "/docs/primitives/scroll-area",
-//     description: "Visually or semantically separates content.",
-//   },
-//   {
-//     title: "Tabs",
-//     href: "/docs/primitives/tabs",
-//     description:
-//       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-//   },
-//   {
-//     title: "Tooltip",
-//     href: "/docs/primitives/tooltip",
-//     description:
-//       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-//   },
-// ]
 
 export function NavbarLogin() {
   return (
@@ -68,27 +27,6 @@ export function NavbarLogin() {
         </div>
       </Button>
     </div>
-    // <NavigationMenu className="pt-4">
-    //   <NavigationMenuList>
-    //     <div className="flex justify-between items-center">
-    //       <NavigationMenuItem>
-    //         <Link href="/" legacyBehavior passHref>
-    //           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-    //             <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
-    //           </NavigationMenuLink>
-    //         </Link>
-    //       </NavigationMenuItem>
-    //       <NavigationMenuItem>
-    //         <Link href={"/login"} legacyBehavior passHref>
-    //           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-    //             <p className="text-green-500 font-bold">Sign In</p>
-    //           </NavigationMenuLink>
-    //         </Link>
-    //         {/* <Link className="text-green-500 font-bold" href={"/login"} >Sign In</Link> */}
-    //       </NavigationMenuItem>
-    //     </div>
-    //   </NavigationMenuList>
-    // </NavigationMenu>
   )
 }
 

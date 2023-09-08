@@ -99,15 +99,6 @@ export function NavbarSignIn() {
                             </div>
                         </div>
                     </Button>
-                    {/* <div className="inline-flex min-w-0">
-                        <div className="inline-flex relative">
-                            <div>
-                                <Button variant="nothing">
-                                    <Search className="inline-flex w-[1rem] h-[1rem] align-middle"/>
-                                </Button>
-                            </div>
-                        </div>
-                    </div> */}
                 </Link>
             </div>
             <div className="m-[-0.5rem] p-[0.5rem] rounded-[100px] inline-flex min-w-0 items-center">
