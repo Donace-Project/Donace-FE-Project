@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Button } from "../ui/button"
 
+import Clock from 'react-live-clock';
+
 
 export function NavbarLogin() {
   return (
@@ -21,6 +23,9 @@ export function NavbarLogin() {
       </div>
       <Button variant="ghostSignin" className="mr-[1.5vh]">
         <div>
+          {/* <div className="text-[0.875rem] relative" id="time">
+            <Clock format={'HH:mm'} ticking={true} timezone={'VN/ICT'} />
+          </div> */}
           <Link href={"/login"} legacyBehavior passHref>
             <p className="text-green-500 font-bold">Sign In</p>
           </Link>
