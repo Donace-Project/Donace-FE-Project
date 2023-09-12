@@ -10,14 +10,11 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Button } from "../ui/button"
 
-import Clock from 'react-live-clock';
-
-
 export function NavbarLogin() {
   return (
     <div className="relative w-[100%] p-[0.75rem_1rem] z-[200] flex justify-between items-center">
       <div className="items-center flex m-[0px]-[-4px] p-[4px]-[10px]-[4px]-[4px]">
-        <Link href={"/"} className="ml-8 inline">
+        <Link href={"/home"} className="ml-8 inline">
           <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
         </Link>
       </div>

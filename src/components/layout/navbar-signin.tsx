@@ -40,7 +40,7 @@ export function NavbarSignIn() {
     return (
         <div className="relative w-[100%] p-[0.75rem_1rem] z-[200] flex justify-between items-center">
             <div className="items-center flex m-[0px]-[-4px] p-[4px]-[10px]-[4px]-[4px]">
-                <Link href={"/"} className="ml-8 inline">
+                <Link href={"/home"} className="ml-8 inline">
                     <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
                 </Link>
             </div>
@@ -76,7 +76,7 @@ export function NavbarSignIn() {
             </div>
             <div id="right-wrapper" className="flex items-center gap-[1rem]">
                 <div className="text-[0.875rem] relative" id="time">
-                    <Clock format={'HH:mm'} ticking={true} timezone={'VN/ICT'}/> 
+                    <Clock format={'HH:mm'} ticking={true} timezone={'VN/ICT'} />
                 </div>
                 <Link href={"/"} className="relative">
                     <div className="text-[0.875rem] whitespace-nowrap" id="label-nowrap">
@@ -86,7 +86,7 @@ export function NavbarSignIn() {
                 </Link>
                 <Link href={"/"} >
                     <Button variant="nothing" className="p-[0.25rem_0.5rem] m-[-0.25rem_-0.5rem] relative inline-flex min-w-0">
-                        <Search className="block w-[1rem] h-[1rem] align-middle"/>
+                        <Search className="block w-[1rem] h-[1rem] align-middle" />
                     </Button>
                 </Link>
                 <Link href={"/"} >
@@ -94,7 +94,7 @@ export function NavbarSignIn() {
                         <div className="inline-flex min-w-0">
                             <div id="bell-icon" className="inline-flex relative">
                                 <div id="icon">
-                                    <Bell className="block w-[1rem] h-[1rem] align-middle"/>
+                                    <Bell className="block w-[1rem] h-[1rem] align-middle" />
                                 </div>
                             </div>
                         </div>
@@ -133,10 +133,12 @@ export function NavbarSignIn() {
                                     <Settings className="mr-2 h-4 w-4" />
                                     <span>Settings</span>
                                 </DropdownMenuItem>
-                                <DropdownMenuItem>
-                                    <LogOut className="mr-2 h-4 w-4" />
-                                    <span>Log Out</span>
-                                </DropdownMenuItem>
+                                <Link href={"/"}>
+                                    <DropdownMenuItem>
+                                        <LogOut className="mr-2 h-4 w-4" />
+                                        <span>Log Out</span>
+                                    </DropdownMenuItem>
+                                </Link>
                             </DropdownMenuGroup>
                         </DropdownMenuContent>
                     </DropdownMenu>

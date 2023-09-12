@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 
 export function LoginPhoneNumber() {
   return (
-    <div className="w-full lg:max-w-[360px] rounded-2xl">
+    <div className="lg:max-w-[360px] rounded-2xl">
       <Card>
         <CardHeader>
           <CardTitle className="text-4xl font-bold text-green-500 my-0.5">Welcome to DONACE.</CardTitle>
