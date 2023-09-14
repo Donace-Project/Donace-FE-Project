@@ -55,7 +55,7 @@ export function NavbarSignIn() {
                                 <div id="label" className="font-[500]">Events</div>
                             </div>
                         </Link>
-                        <Link href={"/"} className="font-[500] no-underline">
+                        <Link href={"/calendar"} className="font-[500] no-underline">
                             <div className="gap-[.5rem] flex items-center">
                                 <div id="icon">
                                     <CalendarDays className="block w-[1rem] h-[1rem] align-middle" />
