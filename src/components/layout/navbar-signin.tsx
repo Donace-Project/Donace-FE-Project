@@ -3,6 +3,7 @@
 import {
     Bell,
     CalendarDays,
+    CloudHail,
     Compass,
     LogOut,
     Search,
@@ -27,7 +28,6 @@ import * as React from "react"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-// import { Icons } from "@/components/icons"
 import {
     NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
@@ -63,7 +63,7 @@ export function NavbarSignIn() {
                                 <div id="label" className="font-[500]">Calendars</div>
                             </div>
                         </Link>
-                        <Link href={"/"}>
+                        <Link href={"/explore"}>
                             <div className="gap-[.5rem] flex items-center">
                                 <div id="icon">
                                     <Compass className="block w-[1rem] h-[1rem] align-middle" />
@@ -76,12 +76,12 @@ export function NavbarSignIn() {
             </div>
             <div id="right-wrapper" className="flex items-center gap-[1rem]">
                 <div className="text-[0.875rem] relative" id="time">
-                    <Clock format={'HH:mm'} ticking={true} timezone={'VN/ICT'} />
+                    <Clock format={"hh:mm"} ticking={true}/>
                 </div>
                 <Link href={"/"} className="relative">
                     <div className="text-[0.875rem] whitespace-nowrap" id="label-nowrap">
                         Create&nbsp;
-                        <span>event</span>
+                        <span>Event</span>
                     </div>
                 </Link>
                 <Link href={"/"} >
@@ -89,16 +89,56 @@ export function NavbarSignIn() {
                         <Search className="block w-[1rem] h-[1rem] align-middle" />
                     </Button>
                 </Link>
+                <DropdownMenu>
+                </DropdownMenu>
                 <Link href={"/"} >
-                    <Button variant="nothing" className="p-[0.25rem_0.5rem] m-[-0.25rem_-0.5rem] relative inline-flex min-w-0">
-                        <div className="inline-flex min-w-0">
-                            <div id="bell-icon" className="inline-flex relative">
-                                <div id="icon">
+                    <div>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <Button variant="nothing" className="p-[0.25rem_0.5rem] m-[-0.25rem_-0.5rem] relative inline-flex min-w-0">
                                     <Bell className="block w-[1rem] h-[1rem] align-middle" />
-                                </div>
-                            </div>
-                        </div>
-                    </Button>
+                                </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent className="w-[300px] max-w-[300px] min-h-[300px] max-h-[60vh] overflow-auto">
+                                <DropdownMenuGroup>
+                                    <DropdownMenuItem className="text-[0.875rem]">
+                                        <div id="notifaction-row" className="relative p-[0.875rem_1rem]">
+                                            <Link href={"home"}>
+                                                <div></div>
+                                                <div className="gap-[0.75rem] flex items-start">
+                                                    <div id="icon-wrapper" className="relative mt-[0.125rem]">
+                                                        <div id="avatar">
+                                                            <div id="avatar-wrapper">
+                                                                <Avatar>
+                                                                    <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@shadcn" className="w-[32px] h-[32px] rounded-[1000px] relative align-middle"></AvatarImage>
+                                                                </Avatar>
+                                                            </div>
+                                                        </div>
+                                                        <div id="icon" className="rounded-[100px] w-[1rem] h-[1rem] absolute right-[-0.125rem] bottom-[-0.125rem] justify-center flex items-center">
+                                                            <CloudHail className="w-[0.5625rem] h-[0.5625rem] block align-middle bg-red-200 rounded-[150px]" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="min-w-[0] flex-[1_1] flex flex-col">
+                                                        <div>
+                                                            <span>
+                                                                <strong>Donace </strong>
+                                                                registered for
+                                                                <strong> FPT Poly</strong>
+                                                            </span>
+                                                            <br />
+                                                            <span title="set-time-zone">Sep 13</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                        <div id="load-more-observer"></div>
+                                        <div className="min-h-[]1px"></div>
+                                    </DropdownMenuItem>
+                                </DropdownMenuGroup>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                    </div>
                 </Link>
             </div>
             <div className="m-[-0.5rem] p-[0.5rem] rounded-[100px] inline-flex min-w-0 items-center">
@@ -146,29 +186,6 @@ export function NavbarSignIn() {
 
                 </div>
             </Link>
-            {/* <NavigationMenu className="pt-4">
-                <NavigationMenuList>
-                    <div className="items-baseline">
-                        <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
-                                </NavigationMenuLink>
-                            </Link>
-                        </NavigationMenuItem>
-                    </div>
-                    <NavigationMenuItem>
-                        <Link href={"/profile"}>
-                            <div className="gap-5">
-                                <Avatar>
-                                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" className="rounded-full inline-flex h-[45px] w-[45px] justify-center overflow-hidden"></AvatarImage>
-                                    <AvatarFallback>DN</AvatarFallback>
-                                </Avatar>
-                            </div>
-                        </Link>
-                    </NavigationMenuItem>
-                </NavigationMenuList>
-            </NavigationMenu> */}
         </div>
     )
 }
@@ -198,3 +215,7 @@ const ListItem = React.forwardRef<
     )
 })
 ListItem.displayName = "ListItem"
+function moment(arg0: string) {
+    throw new Error("Function not implemented.");
+}
+

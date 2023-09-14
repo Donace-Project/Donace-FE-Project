@@ -4,7 +4,8 @@ import * as React from "react"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-// import { Icons } from "@/components/icons"
+import Clock from 'react-live-clock';
+
 import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
@@ -18,16 +19,16 @@ export function NavbarLogin() {
           <p className="text-opacity-50 text-green-500 font-bold">DONACE</p>
         </Link>
       </div>
-      <Button variant="ghostSignin" className="mr-[1.5vh]">
-        <div>
-          {/* <div className="text-[0.875rem] relative" id="time">
-            <Clock format={'HH:mm'} ticking={true} timezone={'VN/ICT'} />
-          </div> */}
+      <div className="flex items-center gap-[1rem]">
+        <div className="text-[0.875rem] relative" id="time">
+          <Clock format={"hh:mm"} ticking={true} />
+        </div>
+        <Button variant="ghostSignin">
           <Link href={"/login"} legacyBehavior passHref>
             <p className="text-green-500 font-bold">Sign In</p>
           </Link>
-        </div>
-      </Button>
+        </Button>
+      </div>
     </div>
   )
 }
