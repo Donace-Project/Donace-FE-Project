@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Button } from "../ui/button"
-import { CalendarDays, CalendarRange, Plus } from "lucide-react"
+import { CalendarDays, Plus } from "lucide-react"
 import Link from "next/link"
 
 export default function Home() {
@@ -15,9 +15,11 @@ export default function Home() {
                                 <Button variant="secondary" className="text-[0.8rem] p-[0.25rem_0.5rem]">
                                     <div className="z-2 relative">Upcoming</div>
                                 </Button>
-                                <Button variant="ghostSignin" className="text-[0.8rem] p-[0.25rem_0.5rem]">
-                                    <div>Past</div>
-                                </Button>
+                                <Link href={"/home-past-event"}>
+                                    <Button variant="ghostSignin" className="text-[0.8rem] p-[0.25rem_0.5rem]">
+                                        <div>Past</div>
+                                    </Button>
+                                </Link>
                                 {/* <div id="slider-animated" className="left-[calc(0%)] pointer-events-none bg-[#fff2] rounded-[calc(var(0.5rem)/1.25)] w-[calc(100%/var(2))] shadow-[var(rgba(0,0,0,.25))] absolute h-[100%] z-1 transition-transform">
                                 </div> */}
                             </div>
@@ -43,7 +45,7 @@ export default function Home() {
                 <div className="mt-[1.5rem_!important] justify-center flex items-center">
                     <Link href={"/"}>
                         <Button variant="secondary" className="font-[500] rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-[2px_solid_transparent] max-w-[100%] p-[0.625rem_0.875rem] text-[1rem] gap-[0.5rem] h-[calc(2.25rem+2*1px)] w-fit mt-[1rem_!important] flex items-center no-underline">
-                            <Plus className="mr-[0.5rem] stroke-[2.5] w-[1rem] h-[1rem] shrink-0"/>
+                            <Plus className="mr-[0.5rem] stroke-[2.5] w-[1rem] h-[1rem] shrink-0" />
                             <div className="leading-[1] m-[-4px_0] p-[4px_0] overflow-hidden text-ellipsis">
                                 Create Event
                             </div>

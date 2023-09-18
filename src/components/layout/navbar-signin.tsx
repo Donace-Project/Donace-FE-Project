@@ -47,7 +47,7 @@ export function NavbarSignIn() {
             <div id="center-and-right" className="flex justify-between items-center flex-[1_1_0%] max-w-[calc(var(820px))] min-w-[0px]">
                 <div id="center-wrapper">
                     <div id="center-links-wrapper" className="gap-[1.25rem] p-[0px_1rem] text-[0.875rem] flex items-baseline max-w-[var(820px)] m-[0_auto]">
-                        <Link href={"/"} className="font-[500] no-underline">
+                        <Link href={"/home"} className="font-[500] no-underline">
                             <div className="gap-[.5rem] flex items-center">
                                 <div id="icon">
                                     <Ticket className="block w-[1rem] h-[1rem] align-middle" />

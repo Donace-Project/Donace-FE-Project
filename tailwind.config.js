@@ -16,6 +16,14 @@ module.exports = {
       },
     },
     extend: {
+      spacing: {
+        'custom-icon': 'calc(1rem * 1.5)',
+        'border': 'var(1px, 10%)',
+        'lineLeftCustom': 'calc((7rem + 4rem) / 2)'
+      },
+      borderColor: {
+        'custom': 'var(hsla(0,0%,100%,.32))',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
