@@ -76,7 +76,7 @@ export function NavbarSignIn() {
             </div>
             <div id="right-wrapper" className="flex items-center gap-[1rem]">
                 <div className="text-[0.875rem] relative" id="time">
-                    <Clock format={"hh:mm"} ticking={true}/>
+                    <Clock format={"hh:mm"} ticking={true} />
                 </div>
                 <Link href={"/"} className="relative">
                     <div className="text-[0.875rem] whitespace-nowrap" id="label-nowrap">
@@ -169,10 +169,12 @@ export function NavbarSignIn() {
                                         <span>Profile</span>
                                     </DropdownMenuItem>
                                 </Link>
-                                <DropdownMenuItem>
-                                    <Settings className="mr-2 h-4 w-4" />
-                                    <span>Settings</span>
-                                </DropdownMenuItem>
+                                <Link href={"/setting"}>
+                                    <DropdownMenuItem>
+                                        <Settings className="mr-2 h-4 w-4" />
+                                        <span>Settings</span>
+                                    </DropdownMenuItem>
+                                </Link>
                                 <Link href={"/"}>
                                     <DropdownMenuItem>
                                         <LogOut className="mr-2 h-4 w-4" />
