@@ -110,7 +110,7 @@ export function NavbarSignIn() {
                                                         <div id="avatar">
                                                             <div id="avatar-wrapper">
                                                                 <Avatar>
-                                                                    <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@shadcn" className="w-[32px] h-[32px] rounded-[1000px] relative align-middle"></AvatarImage>
+                                                                    <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@donace" className="w-[32px] h-[32px] rounded-[1000px] relative align-middle"></AvatarImage>
                                                                 </Avatar>
                                                             </div>
                                                         </div>

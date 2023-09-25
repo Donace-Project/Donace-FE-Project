@@ -4,9 +4,10 @@ import { Button } from "../ui/button"
 import { Label } from "../ui/label"
 import { Checkbox } from "../ui/checkbox"
 import { Avatar, AvatarImage } from "../ui/avatar"
+import { Switch } from "../ui/switch"
 
-export default function PrefePage(){
-    return(
+export default function PrefePage() {
+    return (
         <div id="page-content" className="box-border">
             <div id="sticky-page-header" className="hidden fixed w-[100%] top-[0px] pt-[0.25rem] z-10">
                 <div id="zm-container" className="opacity-0 gap-[1rem] pl-[1rem_!important] pr-[1rem_!important] flex justify-between items-center max-w-[820px] m-[0_auto]">
@@ -78,7 +79,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -90,7 +91,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -102,7 +103,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -114,7 +115,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -126,7 +127,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -143,7 +144,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -155,7 +156,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -172,7 +173,7 @@ export default function PrefePage(){
                                     <div>
                                         <div id="lux-checkbox" className="relative cursor-pointer text-[1rem] leading-[1.25rem] clear-both flex flex-row justify-start items-center">
                                             <Label id="checkbox-icon" className="block relative mr-[.5rem] leading-[1.2rem] h-[1.2rem] w-[1.2rem] clear-both mb-0">
-                                                <Checkbox id="r2a"/>
+                                                <Checkbox id="r2a" />
                                             </Label>
                                             <Label id="text-label" className="flex-[1_1] cursor-pointer leading-[1.5] mb-0">
                                                 <div id="checkbox-text" className="ml-[.125rem]">
@@ -194,18 +195,22 @@ export default function PrefePage(){
                         </div>
                         <div id="section-title" className="mt-[-.875rem] mb-[1.25rem] text-[#d2d4d7] text-[1rem]">Keep up-to-date with calendars you are interested in.</div>
                     </div>
-                    <div id="content-card" className="p-[1rem_1.125rem_1.125rem] relative rounded-[0.75rem] bg-gray-200 border-[1px] border-solid">
+                    <div id="content-card" className="p-0 relative rounded-[0.75rem] bg-gray-200 border-[1px] border-solid overflow-hidden">
                         <div id="notification-rows">
                             <div id="notification-row">
                                 <div id="divider"></div>
-                                <div id="spread" className="p-[0.75rem_1rem] flex justify-between items-center">
+                                <div id="spread" className="p-[0.75rem_1rem] gap-[0.75rem] flex justify-between items-center">
                                     <div id="avatar-wrapper small">
-                                        <div id="avatar" className="w-[1.5rem] h-[1.5rem] rounded-full bg-center bg-cover relative">
+                                        <div id="avatar" className="w-[1.5rem] h-[1.5rem] rounded-[1000px] bg-center bg-cover relative">
                                             <Avatar>
-                                                <AvatarImage src=""/>
+                                                <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@donace" className="w-[1.5rem] h-[1.5rem] rounded-[1000px] bg-center bg-cover relative"/>
                                             </Avatar>
                                         </div>
                                     </div>
+                                    <div id="name" className="flex-grow flex-shrink">Donace</div>
+                                    <label id="lux-toggle" className="flex-shrink-0 relative inline-block mb-0">
+                                        <Switch id="subscriptions"/>
+                                    </label>
                                 </div>
                             </div>
                         </div>
