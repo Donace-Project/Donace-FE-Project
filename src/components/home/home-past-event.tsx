@@ -39,9 +39,9 @@ export default function HomePastEvent() {
                 <div className="min-h-[1px]"></div>
             </div>
             <div id="zm-container" className="gap-[3rem] p-[1rem] pt-[2rem] max-w-[820px] m-[0_auto] box-border">
-                <div id="timeline" className="box-border">
-                    <div id="timeline-section" className="relative flex w-[100%] gap-[4rem] pb-[3rem] box-border">
-                        <div id="line" className="absolute top-[0.5rem] bottom-0 left-[calc(var(7rem)+var(4rem)/2)] box-border"></div>
+                <div id="timeline">
+                    <div id="timeline-section" className="relative flex w-full gap-[4rem] pb-[3rem]">
+                        <div id="line" className="absolute top-[1.5rem] bottom-0 left-[calc(7rem+4rem/2)] border-l-[0.125rem] border-dashed"></div>
                         <div id="title-away" className="relative z-[5] w-[7rem]">
                             <div id="container" className="sticky top-[var(4.5rem)]">
                                 <div id="timeline-title">
@@ -55,7 +55,7 @@ export default function HomePastEvent() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute top-[0.375rem] right-[calc(-2rem-0.4375rem)] justify-center flex items-center">
+                            <div id="dot-outer-wrapper" className="absolute top-[0.375rem] right-[calc(-2rem-0.4375rem)] justify-center flex items-center">
                                 <div id="dot-wrapper" className="justify-center flex items-center">
                                     <div id="dot" className="w-[0.75rem] h-[0.75rem] border-2 border-custom rounded-[100%]"></div>
                                 </div>
@@ -143,7 +143,7 @@ export default function HomePastEvent() {
                         </div>
                     </div>
                     <div id="timeline-section" className="pb-[0px] relative flex w-full gap-[4rem] box-border">
-                        <div id="line" className="top-[0.125rem] absolute bottom-0 left-lineLeftCustom border-l-[0.125rem] border-dashed border-gray-100"></div>
+                        <div id="line" className="top-[1.5rem] absolute bottom-0 left-[calc(7rem+4rem/2)] border-l-[0.125rem] border-dashed"></div>
                         <div id="title-aways" className="relative z-[5] w-[7rem]">
                             <div id="container" className="sticky top-[4.5rem]">
                                 <div id="timeline-title">
@@ -156,6 +156,11 @@ export default function HomePastEvent() {
                                         </div>
                                     </div>
                                 </div>
+                                <div id="dot-outer-wrapper" className="absolute top-[0.375rem] right-[calc(-2rem-0.4375rem)] justify-center flex items-center">
+                                <div id="dot-wrapper" className="justify-center flex items-center">
+                                    <div id="dot" className="w-[0.75rem] h-[0.75rem] border-2 border-custom rounded-[100%]"></div>
+                                </div>
+                            </div>
                             </div>
                         </div>
                         <div className="min-w-[0] flex-[1_1]">
