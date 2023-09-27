@@ -98,7 +98,7 @@ export default function SettingPage() {
                             <Link href={"/preferences"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
                                 Preferences
                             </Link>
-                            <Link href={"/"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
+                            <Link href={"/payment"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
                                 Payment
                             </Link>
                             <div id="side-padding" className="pl-[var(1rem)-1rem]"></div>
