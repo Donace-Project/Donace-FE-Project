@@ -2,6 +2,7 @@ import { ThemeProvider } from '@/components/theme/theme-provider'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Layout } from '@/components/layout/layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} min-h-screen bg-background relative`}>
+        <div className='blur-xl absolute top-0 left-0 bottom-0 right-0 bg-center bg-no-repeat bg-cover bg-image z-auto'>
+        </div>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <Layout>
+            {children}
+          </Layout>
         </ThemeProvider>
       </body>
     </html>
