@@ -14,7 +14,8 @@ import {
 import React, { useState } from 'react';
 import { usePaymentInputs, PaymentInputsWrapper } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images';
-import { css } from 'styled-components';
+import css from "styled-jsx/css";
+// import { css } from 'styled-components';
 
 export default function PaymentPage() {
     const {
@@ -165,7 +166,7 @@ export default function PaymentPage() {
                     <div id="lux-empty-state" className="text-center mt-[4rem] flex flex-col items-center">
                         <div id="icon" className="justify-center flex items-center">
                             <div className="mb-[-64px]">
-                                <Receipt className="w-[250px] h-auto block align-middle"/>
+                                <Receipt className="w-[250px] h-auto block align-middle" />
                             </div>
                         </div>
                         <h3 className="text-[1.5rem] font-[500] p-[0!important] mt-[5.5rem!important] mb-[0!imporant] leading-[1.2]">No Payments</h3>

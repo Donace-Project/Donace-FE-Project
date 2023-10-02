@@ -81,7 +81,7 @@ export default function Header() {
     return (
         <div className="mr-4 hidden md:flex">
             <Link href={"/"} className="mr-6 flex items-center space-x-2">
-                Donace
+                {/* Donace */}
                 <span className="hidden font-bold sm:inline-block">Donace</span>
             </Link>
 

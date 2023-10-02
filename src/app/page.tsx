@@ -6,7 +6,7 @@ const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="container min-h-fit py-24">
       <div className="grid grid-cols-12 justify-center items-center">
         <div className="col-span-12 md:col-span-6 lg:col-span-4">
           <div className="my-10 text-center md:text-left">
@@ -25,7 +25,7 @@ export default function Home() {
           <div className="my-10">
             <div className='col-span-1 md:col-span-6 h-[500px] flex justify-center items-center'>
               <Suspense fallback={<SpinnerInfinity size={200} enabled={true} />}>
-                <Spline scene="https://prod.spline.design/lz7hvqH6a0vd1xDE/scene.splinecode" className="scale-125" />
+                <Spline scene="https://prod.spline.design/lz7hvqH6a0vd1xDE/scene.splinecode" />
               </Suspense>
             </div>
           </div>
