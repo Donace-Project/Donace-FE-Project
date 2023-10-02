@@ -15,7 +15,6 @@ import React, { useState } from 'react';
 import { usePaymentInputs, PaymentInputsWrapper } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images';
 import css from "styled-jsx/css";
-// import { css } from 'styled-components';
 
 export default function PaymentPage() {
     const {
