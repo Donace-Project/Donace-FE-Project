@@ -28,8 +28,6 @@ export default function HomePastEvent() {
                                         <div>Past</div>
                                     </Button>
                                 </Link>
-                                {/* <div id="slider-animated" className="left-[calc(0%)] pointer-events-none bg-[#fff2] rounded-[calc(var(0.5rem)/1.25)] w-[calc(100%/var(2))] shadow-[var(rgba(0,0,0,.25))] absolute h-[100%] z-1 transition-transform">
-                                </div> */}
                             </div>
                         </div>
                     </div>
