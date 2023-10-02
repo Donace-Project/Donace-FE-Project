@@ -202,8 +202,8 @@ export default function PrefePage() {
                                 <div id="spread" className="p-[0.75rem_1rem] gap-[0.75rem] flex justify-between items-center">
                                     <div id="avatar-wrapper small">
                                         <div id="avatar" className="w-[1.5rem] h-[1.5rem] rounded-[1000px] bg-center bg-cover relative">
-                                            <Avatar>
-                                                <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@donace" className="w-[1.5rem] h-[1.5rem] rounded-[1000px] bg-center bg-cover relative"/>
+                                            <Avatar className="w-[1.5rem] h-[1.5rem] rounded-[1000px] bg-center bg-cover relative">
+                                                <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@donace" />
                                             </Avatar>
                                         </div>
                                     </div>
