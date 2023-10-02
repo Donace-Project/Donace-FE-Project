@@ -14,7 +14,8 @@ import {
 import React, { useState } from 'react';
 import { usePaymentInputs, PaymentInputsWrapper } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images';
-import css from "styled-jsx/css";
+import { css } from 'styled-components';
+
 
 export default function PaymentPage() {
     const {
@@ -30,17 +31,17 @@ export default function PaymentPage() {
     const [expiryDate, setExpiryDate] = useState('');
     const [cvc, setCVC] = useState('');
 
-    const handleChangeCardNumber = (e) => {
-        setCardNumber(e.target.value);
-    };
+    // const handleChangeCardNumber = (e) => {
+    //     setCardNumber(e.target.value);
+    // };
 
-    const handleChangeExpiryDate = (e) => {
-        setExpiryDate(e.target.value);
-    };
+    // const handleChangeExpiryDate = (e) => {
+    //     setExpiryDate(e.target.value);
+    // };
 
-    const handleChangeCVC = (e) => {
-        setCVC(e.target.value);
-    };
+    // const handleChangeCVC = (e) => {
+    //     setCVC(e.target.value);
+    // };
 
     return (
 
@@ -176,4 +177,3 @@ export default function PaymentPage() {
         </div>
     )
 }
-// }
