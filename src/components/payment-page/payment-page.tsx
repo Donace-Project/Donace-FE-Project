@@ -16,6 +16,8 @@ import { usePaymentInputs, PaymentInputsWrapper } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images';
 import { css } from 'styled-components';
 
+//test gì đó mới để check lỗi
+
 
 export default function PaymentPage() {
     const {
