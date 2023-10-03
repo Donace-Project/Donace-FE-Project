@@ -133,7 +133,7 @@ export default function PaymentPage() {
                                     styles={{
                                         fieldWrapper: {
                                             base: css`
-                                                    margin-bottom: 1rem;
+                                                    margin-bottom: 1rem;                                                  
                                                 `
                                         },
                                         input: {
