@@ -38,7 +38,7 @@ import { Button } from "../ui/button";
 
 export function NavbarSignIn() {
     return (
-        <div id="nav-wrapper" className="fixed border-b-[1px] border-solid border-transparent z-[10] w-full">
+        <div id="nav-wrapper" className="fixed border-b-[1px] border-solid border-transparent z-[10] w-full backdrop-blur-lg transition-all duration-300 ease-in-out">
             <div id="background" className="opacity-[1] pointer-events-none fixed w-full h-[180px] z-[1]"></div>
             <div id="nav" className="relative w-full p-[0.75rem_1rem] z-[200] flex justify-between items-center">
                 <Link href={"/home"} className="relative z-[1] cursor-pointer no-underline">
