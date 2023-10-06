@@ -1,19 +1,23 @@
 "use client";
 
-import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, ChevronsUpDown, Circle, Copy, FileImage, Globe, ImageIcon, MapPin, Pen, Ticket, UserCheck2 } from "lucide-react";
+import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, ChevronsUpDown, Circle, Copy, FileImage, Globe, ImageIcon, Info, Map, MapPin, Pen, Ticket, UserCheck2, Video } from "lucide-react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Input } from "../ui/input";
 import Image from "next/image"
 import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
+import { Textarea } from "@/components/ui/textarea"
 import React from "react";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Calendar } from "../ui/calendar";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch"
 import Link from "next/link";
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
 
 
 export default function CreateEvents() {
@@ -80,7 +84,7 @@ export default function CreateEvents() {
                                                 </div>
                                                 <div className="">
                                                     <div id="attribute-row" className="w-full gap-[0.75rem] mb-4 flex items-start">
-                                                        <div id="icon-container" className="w-[2.5rem] h-[2.5rem] border-[1px] border-solid border-gray-200 text-gray-500 rounded-[0.5rem] flex-shrink-0 mt-[0.5rem] overflow-hidden justify-center flex items-center">
+                                                        <div id="icon-container" className="w-[2.5rem] h-[2.5rem] border border-solid border-gray-400 text-gray-500 rounded-[0.5rem] flex-shrink-0 mt-[0.5rem] overflow-hidden justify-center flex items-center">
                                                             <div id="full-width" className="text-center w-full">
                                                                 <div id="month" className="bg-gray-300 text-[0.5rem] font-semibold uppercase p-[2px]">Sep</div>
                                                                 <div id="day" className="transform translate-y-[1px] font-medium">29</div>
@@ -173,7 +177,7 @@ export default function CreateEvents() {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div id="tz-input" className="p-[0.25rem_0.75rem] transition-all duration-300 ease-in-out">
+                                                            <div id="tz-input" className="p-[0.25rem_0.75rem] transition-all duration-300 ease-in-out hover:bg-secondary/80">
                                                                 <div id="lux-menu-trigger-wrapper" className="cursor-pointer inline-flex min-w-0 w-full">
                                                                     <div className="text-[0.8125rem] gap-[.25rem] flex items-center">
                                                                         <div id="icon" className="mr-[.25rem!important] flex items-center">
@@ -184,7 +188,7 @@ export default function CreateEvents() {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <Button type="button" className="justify-start text-black rounded-t-none border-t border-solid border-[rgba(255,255,255,0.08)] p-[0.375rem_0.75rem] w-full cursor-pointer transition-all duration-300 ease-in-out text-[0.8125rem] gap-[.5rem] flex items-center m-0 bg-transparent border leading-[1.5]">
+                                                            <Button variant="secondary" type="button" className="justify-start text-black rounded-t-none border-t border-solid border-[rgba(255,255,255,0.08)] p-[0.375rem_0.75rem] w-full cursor-pointer transition-all duration-300 ease-in-out text-[0.8125rem] gap-[.5rem] flex items-center m-0 bg-transparent border leading-[1.5]">
                                                                 <div id="icon">
                                                                     <Copy className="w-3 h-3 block align-middle" />
                                                                 </div>
@@ -192,14 +196,17 @@ export default function CreateEvents() {
                                                             </Button>
                                                         </div>
                                                     </div>
+
                                                     <div id="attribute-row" className="w-full gap-[0.75rem] mb-4 flex items-start">
-                                                        <div id="icon" className="w-10 h-8 border border-solid border-[rgba(255,255,255,0.08)] rounded-[0.5rem] flex-shrink-0 mt-2 overflow-hidden justify-center flex items-center">
+                                                        <div id="icon" className="w-10 h-10 border border-solid border-gray-400 rounded-[0.5rem] flex-shrink-0 mt-2 overflow-hidden justify-center flex items-center">
                                                             <MapPin className="w-5 h-5 block align-middle" />
                                                         </div>
+                                                        <Popover>
+                                                        <PopoverTrigger asChild className="w-full">
                                                         <div id="location-picker-wrapper" className="min-w-0 flex-1">
                                                             <div id="lux-menu-trigger" className="cursor-pointer inline-flex min-w-0 w-full">
                                                                 <div id="meta-row" className="relative bg-gray-300 rounded-[0.5rem] min-w-0 transition-all duration-300 ease-in-out w-full">
-                                                                    <div id="inner" className="min-h-[3.5625rem] p-[0.375rem_0.75rem]">
+                                                                    <div id="inner" className="min-h-[3.5625rem] p-[0.375rem_0.75rem] rounded-[0.5rem] hover:bg-secondary/80">
                                                                         <div id="">
                                                                             <div id="">
                                                                                 <div id="" className="min-w-0">
@@ -212,6 +219,50 @@ export default function CreateEvents() {
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        </PopoverTrigger>
+                                                        <PopoverContent className="bg-gray-300 relative rounded-[0.5rem] shadow-none overflow-auto">
+                                                            <div id="container" className="w-full p-1">
+                                                                <div id="input-container" className="bg-zinc-300 m-[-1.25rem_-1.25rem_0.25rem] p-[0.75rem_1rem_0.375rem] border-b border-solid border-gray-500">
+                                                                    <textarea className="shadow-none outline-none h-[21px!important] leading-[1.3] overflow-hidden border-none bg-transparent p-0 text-[1rem] font-normal w-full resize-none m-0" spellCheck autoCapitalize="sentences" placeholder="Enter Location or virtual link"/>
+                                                                </div>
+                                                                <div id="label top" className="pt-[0.375rem] p-[0.5rem_0.75rem_0.125rem] text-[0.8125rem]">Recent Locations</div>
+                                                                <div id="">
+                                                                    <div id="location-row" className="bg-gray-200 cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
+                                                                        <div className="overflow-hidden text-ellipsis gap-[.5rem] flex items-center">
+                                                                            <div id="icon" className="w-4 flex-shrink-0 text-gray-500 mr-[0.125rem] overflow-hidden text-ellipsis">
+                                                                                <MapPin className="block w-4 h-4 align-middle"/>
+                                                                            </div>
+                                                                            <div className="overflow-hidden text-ellipsis">
+                                                                                <div id="title" className="text-[0.875rem] overflow-hidden text-ellipsis">Ho Chi Minh City</div>
+                                                                                <div id="text-secondary" className="overflow-hidden text-ellipsis text-[0.8125rem]">Vietnam</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="label" className="p-[0.5rem_0.75rem_0.125rem] text-[0.8125rem]">Virtual Options</div>
+                                                                <div id="location-row clickable" className="cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
+                                                                    <div className="text-[0.875rem] gap-[.5rem] flex items-center">
+                                                                        <Video className="w-[0.875rem] h-[0.875rem] block align-middle"/>
+                                                                        <div>Create Zoom meeting</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="location-row clickable" className="cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
+                                                                    <div className="text-[0.875rem] gap-[.5rem] flex items-center">
+                                                                        <Video className="w-[0.875rem] h-[0.875rem] block align-middle"/>
+                                                                        <div>Select existing Zoom</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="location-row" className="p-[0.3125rem_0.5rem]">
+                                                                    <div className="text-[0.8125rem] text-gray-500 gap-[.5rem] flex items-center">
+                                                                        <div id="icon" className="flex-shrink-0">
+                                                                            <Info className="h-[0.875rem] w-[0.875rem] block align-middle"/>
+                                                                        </div>
+                                                                        <div>If you have a virtual event link, you can enter or paste it above.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </PopoverContent>
+                                                        </Popover>
                                                     </div>
                                                 </div>
                                                 <div id="advanced-options" className="mt-[1.5rem!important]">
@@ -228,7 +279,7 @@ export default function CreateEvents() {
                                                                 <div id="label" className="select-none flex-1">Tickets</div>
                                                                 <div className="gap-[.25rem] flex items-center">
                                                                     <div id="value" className="font-medium">Free</div>
-                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit">
+                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
                                                                         <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
                                                                     </Button>
                                                                 </div>
@@ -256,7 +307,7 @@ export default function CreateEvents() {
                                                                 <div id="label" className="select-none flex-1">Capacity</div>
                                                                 <div className="gap-[.25rem] flex items-center">
                                                                     <div id="value" className="font-medium">Unlimited</div>
-                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit">
+                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
                                                                         <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
                                                                     </Button>
                                                                 </div>
@@ -275,7 +326,7 @@ export default function CreateEvents() {
                                                                     <div id="label" className="select-none flex-1">Visibility</div>
                                                                     <div className="gap-[.25rem] flex items-center">
                                                                         <div id="value" className="font-medium">Public</div>
-                                                                        <div id="accessory" className="transition-all duration-300 ease-in-out">
+                                                                        <div id="accessory" className="transition-all duration-300 ease-in-out hover:text-white">
                                                                             <ChevronsUpDown className="block w-4 h-4 align-middle" />
                                                                         </div>
                                                                     </div>
@@ -444,8 +495,8 @@ export default function CreateEvents() {
                                                                         </div>
                                                                         <div id="label" className="select-none flex-1">Color</div>
                                                                         <div id="value" className="font-medium capitalize">Gray</div>
-                                                                        <div id="accessory" className="text-gray-400 transition-all duration-300 ease-in-out">
-                                                                            <ChevronsUpDown className="block w-4 h-4 align-middle"/>
+                                                                        <div id="accessory" className="text-gray-400 transition-all duration-300 ease-in-out hover:text-white">
+                                                                            <ChevronsUpDown className="block w-4 h-4 align-middle" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -464,13 +515,13 @@ export default function CreateEvents() {
                                                                     <div className="gap-[.5rem] flex items-center">
                                                                         <div id="icon" className="mr-[.25rem!important]">
                                                                             <div id="icon">
-                                                                                <CaseUpper className="w-6 h-6 block align-middle"/>
+                                                                                <CaseUpper className="w-6 h-6 block align-middle" />
                                                                             </div>
                                                                         </div>
                                                                         <div id="label" className="select-none flex-1">Typeface</div>
                                                                         <div id="value" className="font-medium capitalize">Default</div>
-                                                                        <div id="accessory" className="text-gray-400 transition-all duration-300 ease-in-out">
-                                                                            <ChevronsUpDown className="block w-4 h-4 align-middle"/>
+                                                                        <div id="accessory" className="text-gray-400 transition-all duration-300 ease-in-out hover:text-white">
+                                                                            <ChevronsUpDown className="block w-4 h-4 align-middle" />
                                                                         </div>
                                                                     </div>
                                                                 </div>
