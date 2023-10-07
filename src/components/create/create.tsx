@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, ChevronsUpDown, Circle, Copy, FileImage, Globe, ImageIcon, Info, Map, MapPin, Pen, Ticket, UserCheck2, Video } from "lucide-react";
+import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, ChevronsUpDown, Circle, Copy, FileImage, Globe, ImageIcon, Info, Map, MapPin, Pen, Ticket, UserCheck2, Video, Wallet } from "lucide-react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Input } from "../ui/input";
 import Image from "next/image"
@@ -17,12 +17,23 @@ import {
     Popover,
     PopoverContent,
     PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@/components/ui/popover";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 
 
 export default function CreateEvents() {
     const [date1, setDate1] = React.useState<Date>()
     const [date2, setDate2] = React.useState<Date>()
+    const [date3, setDate3] = React.useState<Date>()
+
 
     return (
         <div id="page-content" className="box-border pt-16">
@@ -188,12 +199,98 @@ export default function CreateEvents() {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <Button variant="secondary" type="button" className="justify-start text-black rounded-t-none border-t border-solid border-[rgba(255,255,255,0.08)] p-[0.375rem_0.75rem] w-full cursor-pointer transition-all duration-300 ease-in-out text-[0.8125rem] gap-[.5rem] flex items-center m-0 bg-transparent border leading-[1.5]">
-                                                                <div id="icon">
-                                                                    <Copy className="w-3 h-3 block align-middle" />
-                                                                </div>
-                                                                <div>Create Multi-Session Event</div>
-                                                            </Button>
+                                                            <Dialog>
+                                                                <DialogTrigger asChild>
+                                                                    <Button variant="secondary" type="button" className="justify-start text-black rounded-t-none border-t border-solid border-[rgba(255,255,255,0.08)] p-[0.375rem_0.75rem] w-full cursor-pointer transition-all duration-300 ease-in-out text-[0.8125rem] gap-[.5rem] flex items-center m-0 bg-transparent border leading-[1.5]">
+                                                                        <div id="icon">
+                                                                            <Copy className="w-3 h-3 block align-middle" />
+                                                                        </div>
+                                                                        <div>Create Multi-Session Event</div>
+                                                                    </Button>
+                                                                </DialogTrigger>
+                                                                <DialogContent className="max-w-[400px] p-[1rem_1.25rem] overflow-hidden flex flex-col rounded-2xl bg-gray-200">
+                                                                    <div>
+                                                                        <DialogHeader className="text-[1.125rem] leading-[1.2] font-semibold mt-0 mb-4">
+                                                                            <DialogTitle>
+                                                                                Create Multi-Session Event
+                                                                            </DialogTitle>
+                                                                        </DialogHeader>
+                                                                    </div>
+                                                                    <div className="pb-[1rem!important]">
+                                                                        <Label className="text-[0.875rem] block mb-[.375rem] font-medium text-gray-500 transition-all duration-300 ease-in-out">
+                                                                            <div>Duration</div>
+                                                                        </Label>
+                                                                        <div id="duration-input" className="flex max-w-[350px]">
+                                                                            <div id="lux-input-wrapper" className="mr-[.5rem!important]">
+                                                                                <div id="inner-wrapper" className="inline-block w-full">
+                                                                                    <div className="flex items-baseline">
+                                                                                        <div className="flex-1 flex items-center">
+                                                                                            <div id="zero-with-filler">&nbsp;</div>
+                                                                                            <div id="input-inner-wrapper" className="relative flex-1">
+                                                                                                <Input placeholder="0" type="number" inputMode="numeric" className="min-w-[5rem] text-right text-base h-[calc(2.25rem+2*1px)] p-[0.625rem_0.875rem] rounded-r-[0!important] m-0 border border-solid border-[#333537]" />
+                                                                                                <div id="indicator invisible" className="pointer-events-none opacity-0 absolute right-[.75rem] bottom-[50%]"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div id="accessory-text" className="text-[1rem] h-[calc(2.25rem+2*1px)] p-[0.625rem_0.875rem] border-l-0 rounded-l-[0!important] leading-[1] text-gray-500 bg-gray-300 border border-solid border-[#333537] rounded-[0.5rem] flex items-center">hour</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id="helper-text" className="text-[#939597] max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out text-[0.875rem]"></div>
+                                                                            </div>
+                                                                            <div id="lux-input-wrapper" className="mr-[.5rem!important]">
+                                                                                <div id="inner-wrapper" className="inline-block w-full">
+                                                                                    <div className="flex items-baseline">
+                                                                                        <div className="flex-1 flex items-center">
+                                                                                            <div id="zero-with-filler">&nbsp;</div>
+                                                                                            <div id="input-inner-wrapper" className="relative flex-1">
+                                                                                                <Input placeholder="0" type="number" inputMode="numeric" className="min-w-[5rem] text-right text-base h-[calc(2.25rem+2*1px)] p-[0.625rem_0.875rem] rounded-r-[0!important] m-0 border border-solid border-[#333537]" />
+                                                                                                <div id="indicator invisible" className="pointer-events-none opacity-0 absolute right-[.75rem] bottom-[50%]"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div id="accessory-text" className="text-[1rem] h-[calc(2.25rem+2*1px)] p-[0.625rem_0.875rem] border-l-0 rounded-l-[0!important] leading-[1] text-gray-500 bg-gray-300 border border-solid border-[#333537] rounded-[0.5rem] flex items-center">miniute</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div id="helper-text" className="text-[#939597] max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out text-[0.875rem]"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div id="" className="pt-6">
+                                                                            <Label className="text-[0.875rem] block mb-[.375rem] font-medium text-gray-500 transition-all duration-300 ease-in-out">
+                                                                                <div>Session</div>
+                                                                            </Label>
+                                                                            <div className="gap-[.5rem] flex flex-col">
+                                                                                <div id="animated session-input" className="transition-all duration-300 ease-in-out flex items-center">
+                                                                                    <div className="min-w-0">
+                                                                                        <div id="datetime-timzezone" className="w-[300px] max-w-full">
+                                                                                            <div id="datetime-input" className="flex transition-all duration-300 ease-in-out">
+                                                                                                <Popover>
+                                                                                                    <PopoverTrigger className="w-full">
+                                                                                                        <Button
+                                                                                                            variant={"ghost"}
+                                                                                                            className={cn(
+                                                                                                                "w-full items-center justify-center text-white font-medium bg-gray-400",
+                                                                                                                !date3 && "text-white"
+                                                                                                            )}
+                                                                                                        >
+                                                                                                            {date3 ? format(date3, "PPP") : <span>Pick a date</span>}
+                                                                                                        </Button>
+                                                                                                    </PopoverTrigger>
+                                                                                                    <PopoverContent className="w-auto p-0 m-2 rounded-md">
+                                                                                                        <Calendar
+                                                                                                            mode="single"
+                                                                                                            selected={date3}
+                                                                                                            onSelect={setDate3}
+                                                                                                            initialFocus
+                                                                                                        />
+                                                                                                    </PopoverContent>
+                                                                                                </Popover>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </DialogContent>
+                                                            </Dialog>
                                                         </div>
                                                     </div>
 
@@ -202,66 +299,66 @@ export default function CreateEvents() {
                                                             <MapPin className="w-5 h-5 block align-middle" />
                                                         </div>
                                                         <Popover>
-                                                        <PopoverTrigger asChild className="w-full">
-                                                        <div id="location-picker-wrapper" className="min-w-0 flex-1">
-                                                            <div id="lux-menu-trigger" className="cursor-pointer inline-flex min-w-0 w-full">
-                                                                <div id="meta-row" className="relative bg-gray-300 rounded-[0.5rem] min-w-0 transition-all duration-300 ease-in-out w-full">
-                                                                    <div id="inner" className="min-h-[3.5625rem] p-[0.375rem_0.75rem] rounded-[0.5rem] hover:bg-secondary/80">
-                                                                        <div id="">
-                                                                            <div id="">
-                                                                                <div id="" className="min-w-0">
-                                                                                    <div id="title" className="font-medium overflow-hidden text-ellipsis whitespace-nowrap">Add Event Location</div>
-                                                                                    <div id="subtitle" className="overflow-hidden text-ellipsis whitespace-nowrap text-[0.875rem]">Offline location or virtual link</div>
+                                                            <PopoverTrigger asChild className="w-full">
+                                                                <div id="location-picker-wrapper" className="min-w-0 flex-1">
+                                                                    <div id="lux-menu-trigger" className="cursor-pointer inline-flex min-w-0 w-full">
+                                                                        <div id="meta-row" className="relative bg-gray-300 rounded-[0.5rem] min-w-0 transition-all duration-300 ease-in-out w-full">
+                                                                            <div id="inner" className="min-h-[3.5625rem] p-[0.375rem_0.75rem] rounded-[0.5rem] hover:bg-secondary/80">
+                                                                                <div id="">
+                                                                                    <div id="">
+                                                                                        <div id="" className="min-w-0">
+                                                                                            <div id="title" className="font-medium overflow-hidden text-ellipsis whitespace-nowrap">Add Event Location</div>
+                                                                                            <div id="subtitle" className="overflow-hidden text-ellipsis whitespace-nowrap text-[0.875rem]">Offline location or virtual link</div>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                        </PopoverTrigger>
-                                                        <PopoverContent className="bg-gray-300 relative rounded-[0.5rem] shadow-none overflow-auto">
-                                                            <div id="container" className="w-full p-1">
-                                                                <div id="input-container" className="bg-zinc-300 m-[-1.25rem_-1.25rem_0.25rem] p-[0.75rem_1rem_0.375rem] border-b border-solid border-gray-500">
-                                                                    <textarea className="shadow-none outline-none h-[21px!important] leading-[1.3] overflow-hidden border-none bg-transparent p-0 text-[1rem] font-normal w-full resize-none m-0" spellCheck autoCapitalize="sentences" placeholder="Enter Location or virtual link"/>
-                                                                </div>
-                                                                <div id="label top" className="pt-[0.375rem] p-[0.5rem_0.75rem_0.125rem] text-[0.8125rem]">Recent Locations</div>
-                                                                <div id="">
-                                                                    <div id="location-row" className="bg-gray-200 cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
-                                                                        <div className="overflow-hidden text-ellipsis gap-[.5rem] flex items-center">
-                                                                            <div id="icon" className="w-4 flex-shrink-0 text-gray-500 mr-[0.125rem] overflow-hidden text-ellipsis">
-                                                                                <MapPin className="block w-4 h-4 align-middle"/>
-                                                                            </div>
-                                                                            <div className="overflow-hidden text-ellipsis">
-                                                                                <div id="title" className="text-[0.875rem] overflow-hidden text-ellipsis">Ho Chi Minh City</div>
-                                                                                <div id="text-secondary" className="overflow-hidden text-ellipsis text-[0.8125rem]">Vietnam</div>
+                                                            </PopoverTrigger>
+                                                            <PopoverContent className="bg-gray-300 relative rounded-[0.5rem] shadow-none overflow-auto">
+                                                                <div id="container" className="w-full p-1">
+                                                                    <div id="input-container" className="bg-zinc-300 m-[-1.25rem_-1.25rem_0.25rem] p-[0.75rem_1rem_0.375rem] border-b border-solid border-gray-500">
+                                                                        <textarea className="shadow-none outline-none h-[21px!important] leading-[1.3] overflow-hidden border-none bg-transparent p-0 text-[1rem] font-normal w-full resize-none m-0" spellCheck autoCapitalize="sentences" placeholder="Enter Location or virtual link" />
+                                                                    </div>
+                                                                    <div id="label top" className="pt-[0.375rem] p-[0.5rem_0.75rem_0.125rem] text-[0.8125rem]">Recent Locations</div>
+                                                                    <div id="">
+                                                                        <div id="location-row" className="bg-gray-200 cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
+                                                                            <div className="overflow-hidden text-ellipsis gap-[.5rem] flex items-center">
+                                                                                <div id="icon" className="w-4 flex-shrink-0 text-gray-500 mr-[0.125rem] overflow-hidden text-ellipsis">
+                                                                                    <MapPin className="block w-4 h-4 align-middle" />
+                                                                                </div>
+                                                                                <div className="overflow-hidden text-ellipsis">
+                                                                                    <div id="title" className="text-[0.875rem] overflow-hidden text-ellipsis">Ho Chi Minh City</div>
+                                                                                    <div id="text-secondary" className="overflow-hidden text-ellipsis text-[0.8125rem]">Vietnam</div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <div id="label" className="p-[0.5rem_0.75rem_0.125rem] text-[0.8125rem]">Virtual Options</div>
-                                                                <div id="location-row clickable" className="cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
-                                                                    <div className="text-[0.875rem] gap-[.5rem] flex items-center">
-                                                                        <Video className="w-[0.875rem] h-[0.875rem] block align-middle"/>
-                                                                        <div>Create Zoom meeting</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div id="location-row clickable" className="cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
-                                                                    <div className="text-[0.875rem] gap-[.5rem] flex items-center">
-                                                                        <Video className="w-[0.875rem] h-[0.875rem] block align-middle"/>
-                                                                        <div>Select existing Zoom</div>
-                                                                    </div>
-                                                                </div>
-                                                                <div id="location-row" className="p-[0.3125rem_0.5rem]">
-                                                                    <div className="text-[0.8125rem] text-gray-500 gap-[.5rem] flex items-center">
-                                                                        <div id="icon" className="flex-shrink-0">
-                                                                            <Info className="h-[0.875rem] w-[0.875rem] block align-middle"/>
+                                                                    <div id="label" className="p-[0.5rem_0.75rem_0.125rem] text-[0.8125rem]">Virtual Options</div>
+                                                                    <div id="location-row clickable" className="cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
+                                                                        <div className="text-[0.875rem] gap-[.5rem] flex items-center">
+                                                                            <Video className="w-[0.875rem] h-[0.875rem] block align-middle" />
+                                                                            <div>Create Zoom meeting</div>
                                                                         </div>
-                                                                        <div>If you have a virtual event link, you can enter or paste it above.</div>
+                                                                    </div>
+                                                                    <div id="location-row clickable" className="cursor-pointer rounded-[0.25rem] p-[0.3125rem_0.75rem]">
+                                                                        <div className="text-[0.875rem] gap-[.5rem] flex items-center">
+                                                                            <Video className="w-[0.875rem] h-[0.875rem] block align-middle" />
+                                                                            <div>Select existing Zoom</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="location-row" className="p-[0.3125rem_0.5rem]">
+                                                                        <div className="text-[0.8125rem] text-gray-500 gap-[.5rem] flex items-center">
+                                                                            <div id="icon" className="flex-shrink-0">
+                                                                                <Info className="h-[0.875rem] w-[0.875rem] block align-middle" />
+                                                                            </div>
+                                                                            <div>If you have a virtual event link, you can enter or paste it above.</div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </PopoverContent>
+                                                            </PopoverContent>
                                                         </Popover>
                                                     </div>
                                                 </div>
@@ -279,9 +376,49 @@ export default function CreateEvents() {
                                                                 <div id="label" className="select-none flex-1">Tickets</div>
                                                                 <div className="gap-[.25rem] flex items-center">
                                                                     <div id="value" className="font-medium">Free</div>
-                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
-                                                                        <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
-                                                                    </Button>
+                                                                    <Dialog>
+                                                                        <DialogTrigger asChild>
+                                                                            <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
+                                                                                <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
+                                                                            </Button>
+                                                                        </DialogTrigger>
+                                                                        <DialogContent className="w-full p-[1rem_1.25rem] overflow-auto">
+                                                                            <div id="alert-wrapper" className="p-1">
+                                                                                <DialogHeader className="pt-1">
+                                                                                    <div id="lux-alert-top" className="pt-1">
+                                                                                        <div id="icon-wrapper" className="m-[0.25rem_0px_0.75rem] w-14 h-14 rounded-[1000px] bg-gray-300 justify-center flex items-center">
+                                                                                            <Wallet className="w-8 h-8 block align-middle" />
+                                                                                        </div>
+                                                                                        <div id="title" className="font-semibold text-[1.25rem] mb-2">Accept Payments</div>
+                                                                                        <DialogDescription>
+                                                                                            <div id="desc" className="text-gray-400">
+                                                                                                <div>
+                                                                                                    <p className="mt-4">Your account
+                                                                                                        is not yet set up to accept payments.
+                                                                                                    </p>
+                                                                                                    <p className="pt-4">We use
+                                                                                                        <Link href={""} target="_blank" className="text-red-500 font-bold"> VN</Link>
+                                                                                                        <Link href={""} target="_blank" className="text-blue-500 font-bold">Pay </Link>
+                                                                                                        as our payment processor. Connect or set up a
+                                                                                                        <span className="text-red-500 font-bold"> VN</span>
+                                                                                                        <span className="text-blue-500 font-bold">Pay </span>
+                                                                                                        account to start accepting payments. It usually takes less than 5 minutes.
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </DialogDescription>
+                                                                                    </div>
+                                                                                </DialogHeader>
+                                                                                <DialogTitle className="pt-2 items-center">
+                                                                                    <div className="mt-4 flex items-center">
+                                                                                        <Button variant="nothing" type="button" className="flex-1 text-[rgb(19,21,23)] bg-gray-200 border-gray-200 border border-solid w-full cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full p-[0.625rem_0.875rem] h-[calc(2.25rem+2*1px)] flex items-center m-0 leading-[1.5]">
+                                                                                            <div id="label" className="">Connect <span className="text-red-500 font-bold">VN</span><span className="text-blue-500 font-bold">Pay</span></div>
+                                                                                        </Button>
+                                                                                    </div>
+                                                                                </DialogTitle>
+                                                                            </div>
+                                                                        </DialogContent>
+                                                                    </Dialog>
                                                                 </div>
                                                             </div>
                                                             <div id="lux-collapse" className="overflow-hidden h-0 hidden">
@@ -307,9 +444,69 @@ export default function CreateEvents() {
                                                                 <div id="label" className="select-none flex-1">Capacity</div>
                                                                 <div className="gap-[.25rem] flex items-center">
                                                                     <div id="value" className="font-medium">Unlimited</div>
-                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
-                                                                        <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
-                                                                    </Button>
+                                                                    <Dialog>
+                                                                        <DialogTrigger asChild>
+                                                                            <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
+                                                                                <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
+                                                                            </Button>
+                                                                        </DialogTrigger>
+                                                                        <DialogContent className="w-full p-[1rem_1.25rem] overflow-auto">
+                                                                            <div id="alert-wrapper" className="p-1">
+                                                                                <DialogHeader className="pt-1">
+                                                                                    <div id="lux-alert-top" className="pt-1">
+                                                                                        <div id="icon-wrapper" className="m-[0.25rem_0px_0.75rem] w-14 h-14 rounded-[1000px] bg-gray-300 justify-center flex items-center">
+                                                                                            <ArrowUpToLine className="w-8 h-8 block align-middle" />
+                                                                                        </div>
+                                                                                        <div id="title" className="font-semibold text-[1.25rem] mb-2">Max Capacity</div>
+                                                                                        <DialogDescription>
+                                                                                            <div id="desc" className="text-gray-400">
+                                                                                                Auto-close registration when the capacity is reached. Only approved guests count toward the cap.
+                                                                                            </div>
+                                                                                        </DialogDescription>
+                                                                                    </div>
+                                                                                </DialogHeader>
+                                                                                <DialogTitle>
+                                                                                    <form action={"#"} className="gap-4 pt-[.25rem!important] mt-[.5rem!important] flex flex-col">
+                                                                                        <div id="lux-input-wrapper">
+                                                                                            <div id="inner-wrapper" className="inline-block w-full">
+                                                                                                <Label id="lux-input-label" className="text-[0.875rem] block mb-[.375rem] font-medium text-gray-500 transition-all duration-300 ease-in-out">
+                                                                                                    <div>Capacity</div>
+                                                                                                </Label>
+                                                                                                <div id="input-wrapper" className="flex items-baseline">
+                                                                                                    <div className="flex-1 flex items-center">
+                                                                                                        <div id="zero-width-filler">&nbsp;</div>
+                                                                                                        <div id="input-inner-wrapper" className="relative flex-1">
+                                                                                                            <input name="max_capacity" step={1} min={1} inputMode="numeric" placeholder="0" className="text-[1rem] h-[calc(2.25rem+2*1px)] p-[0.625rem_0.875rem] transition-all duration-300 ease-in-out leading-[1] rounded-[0.5rem] overflow-hidden border border-solid border-[#333537] bg-gray-200 w-full m-0"></input>
+                                                                                                            <div id="indicator invisible" className="pointer-events-none opacity-0 absolute right-[.75rem] bottom-[50%] translate-y-1/2 text-[#facc28] transition-opacity duration-[0.3s] ease-in-out w-4 h-4"></div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div id="helper-text" className="text-[#939597] max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out text-[0.875rem]"></div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div id="spread" className="gap-[.5rem] flex justify-between items-center">
+                                                                                            <Label className="font-medium text-gray-500 flex-1">Over-Capacity Waitlist</Label>
+                                                                                            <Label id="lux-toggle" className="w-[2.375rem] h-[1.5rem] flex-shrink-0 relative inline-block mb-0">
+                                                                                                <Switch className="transition-all duration-300 ease-in-out absolute cursor-pointer top-0 left-0 bottom-0 right-0"/>
+                                                                                            </Label>
+                                                                                        </div>
+                                                                                        <div id="spread" className="gap-[.5rem] flex justify-between items-center">
+                                                                                            <Button variant="nothing" type="submit" className="text-black bg-slate-300 border-white border border-solid w-full cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1) font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-base p-[0.625rem_0.875rem] h-[calc(2.25rem+2*1px)] flex items-center m-0 leading-[1.5]">
+                                                                                                <div id="label" className="leading-[1] m-[-4px_0] p-[4px_0] overflow-hidden text-ellipsis">
+                                                                                                    Set Limit
+                                                                                                </div>
+                                                                                            </Button>
+                                                                                            <Button variant="nothing" type="button" className="bg-gray-200 border-white border border-solid w-full cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1) font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-base p-[0.625rem_0.875rem] h-[calc(2.25rem+2*1px)] flex items-center m-0 leading-[1.5]">
+                                                                                                <div id="label" className="leading-[1] m-[-4px_0] p-[4px_0] overflow-hidden text-ellipsis">
+                                                                                                    Remove Limit
+                                                                                                </div>
+                                                                                            </Button>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </DialogTitle>
+                                                                            </div>
+                                                                        </DialogContent>
+                                                                    </Dialog>
                                                                 </div>
                                                             </div>
                                                             <div id="lux-collapse" className="overflow-hidden h-0 hidden">
