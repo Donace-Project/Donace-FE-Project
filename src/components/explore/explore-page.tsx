@@ -1,9 +1,11 @@
 import { Building } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { AspectRatio } from "../ui/aspect-ratio";
 
 
-export default function ExploreHome(){
-    return(
+export default function ExploreHome() {
+    return (
         <div id="page-content" className="pt-[calc(3.25rem+1px)] box-border">
             <div id="page-header" className="opacity-1 pt-[3rem] pl-[1rem_!important] pr-[1rem_!important] max-w-[820px] m-[0_auto] box-border">
                 <div className="gap-[.5rem] mb-[.5rem_!important] flex justify-between items-center">
@@ -17,10 +19,43 @@ export default function ExploreHome(){
                     <Link href={"/"} className="h-[300px] p-[1.375rem_1.5rem_1.5rem] rounded-[0.75rem] relative overflow-hidden flex justify-between flex-col no-underline from-orange-300">
                         <div id="underlay-animated" className="absolute h-[100%] w-[100%] top-0 left-0"></div>
                         <div id="building-wrapper" className="absolute h-[100%] w-[300px] right-[-50px] bottom-0">
-                            <img src="https://cdn.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=2,quality=75,width=300,height=300/discovery/london-card-dark.png" alt=""></img>
+                            <img src="https://cdn.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=2,quality=75,width=300,height=300/discovery/london-card-dark.png" alt="img" />
                         </div>
                     </Link>
                 </div> */}
+
+                <div className="grid grid-cols-12 gap-5 mt-20">
+                    <Link href={"/"} className="col-span-12 md:col-span-6 rounded">
+                        <AspectRatio ratio={4 / 3} className="bg-muted ">
+                            <Image
+                                src="https://picsum.photos/1000/1000?random=1"
+                                alt="Photo by Drew Beamer"
+                                fill
+                                className="object-cover rounded"
+                            />
+                        </AspectRatio>
+                    </Link>
+                    <div className="col-span-12 md:col-span-6 rounded">
+                        <AspectRatio ratio={4 / 3} className="bg-muted ">
+                            <Image
+                                src="https://picsum.photos/1000/1000?random=1"
+                                alt="Photo by Drew Beamer"
+                                fill
+                                className="object-cover rounded"
+                            />
+                        </AspectRatio>
+                    </div>
+                    <div className="col-span-12 md:col-span-6 rounded">
+                        <AspectRatio ratio={4 / 3} className="bg-muted ">
+                            <Image
+                                src="https://picsum.photos/1000/1000?random=1"
+                                alt="Photo by Drew Beamer"
+                                fill
+                                className="object-cover rounded"
+                            />
+                        </AspectRatio>
+                    </div>
+                </div>
             </div>
         </div>
     )
