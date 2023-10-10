@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, ChevronsUpDown, Circle, Copy, FileImage, Globe, ImageIcon, Info, Map, MapPin, Pen, Ticket, UserCheck2, Video, Wallet } from "lucide-react";
+import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, ChevronsUpDown, Circle, Copy, Divide, FileImage, Globe, GlobeIcon, ImageIcon, Info, Map, MapPin, Pen, Sparkles, Ticket, UserCheck2, Video, Wallet } from "lucide-react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Input } from "../ui/input";
 import Image from "next/image"
@@ -27,6 +27,11 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import {
+    HoverCard,
+    HoverCardContent,
+    HoverCardTrigger,
+} from "@/components/ui/hover-card"
 
 
 export default function CreateEvents() {
@@ -91,7 +96,7 @@ export default function CreateEvents() {
                                                     </div>
                                                 </div>
                                                 <div id="name-input-wrapper" className="h-[42px] m-[1.5rem_0px] flex">
-                                                    <Textarea className="h-[42px!important] leading-[1.3] overflow-hidden border-none bg-transparent p-0 text-[2rem] font-medium w-full resize-none m-0 shadow-none" spellCheck="false" autoCapitalize="words" placeholder="Event Name"></Textarea>
+                                                    <Textarea className="h-[42px!important] leading-[1.3] overflow-hidden border-none bg-transparent p-0 text-[2rem] font-medium w-full resize-none m-0 shadow-none" spellCheck="false" autoCapitalize="words" placeholder="Event Name"/>
                                                 </div>
                                                 <div className="">
                                                     <div id="attribute-row" className="w-full gap-[0.75rem] mb-4 flex items-start">
@@ -377,11 +382,20 @@ export default function CreateEvents() {
                                                                 <div className="gap-[.25rem] flex items-center">
                                                                     <div id="value" className="font-medium">Free</div>
                                                                     <Dialog>
-                                                                        <DialogTrigger asChild>
-                                                                            <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
-                                                                                <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
-                                                                            </Button>
-                                                                        </DialogTrigger>
+                                                                        <HoverCard>
+                                                                            <HoverCardTrigger asChild>
+                                                                                <DialogTrigger asChild>
+                                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
+                                                                                        <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
+                                                                                    </Button>
+                                                                                </DialogTrigger>
+                                                                            </HoverCardTrigger>
+                                                                            <HoverCardContent className="flex justify-center items-center w-12 h-12">
+                                                                                <div className="font-medium">
+                                                                                    Edit
+                                                                                </div>
+                                                                            </HoverCardContent>
+                                                                        </HoverCard>
                                                                         <DialogContent className="w-full p-[1rem_1.25rem] overflow-auto">
                                                                             <div id="alert-wrapper" className="p-1">
                                                                                 <DialogHeader className="pt-1">
@@ -445,11 +459,20 @@ export default function CreateEvents() {
                                                                 <div className="gap-[.25rem] flex items-center">
                                                                     <div id="value" className="font-medium">Unlimited</div>
                                                                     <Dialog>
-                                                                        <DialogTrigger asChild>
-                                                                            <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
-                                                                                <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
-                                                                            </Button>
-                                                                        </DialogTrigger>
+                                                                        <HoverCard>
+                                                                            <HoverCardTrigger asChild>
+                                                                                <DialogTrigger asChild>
+                                                                                    <Button variant="nothing" className="mr-[-0.25rem] text-black p-[0.3125rem] h-auto border-[transparent!important] border border-solid bg-transparent gap-[0.375rem] flex-shrink-0 cursor-pointer transition-[all_0.3s_cubic-bezier(0.4,0,0.2,1)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-2 outline outline-transparent max-w-full text-[0.875rem] w-fit hover:bg-gray-400 hover:text-white">
+                                                                                        <Pen className="stroke-[2.5] w-[0.875rem] h-[0.875rem] flex-shrink block align-middle" />
+                                                                                    </Button>
+                                                                                </DialogTrigger>
+                                                                            </HoverCardTrigger>
+                                                                            <HoverCardContent className="flex justify-center items-center w-12 h-12">
+                                                                                <div className="font-medium">
+                                                                                    Edit
+                                                                                </div>
+                                                                            </HoverCardContent>
+                                                                        </HoverCard>
                                                                         <DialogContent className="w-full p-[1rem_1.25rem] overflow-auto">
                                                                             <div id="alert-wrapper" className="p-1">
                                                                                 <DialogHeader className="pt-1">
@@ -487,7 +510,7 @@ export default function CreateEvents() {
                                                                                         <div id="spread" className="gap-[.5rem] flex justify-between items-center">
                                                                                             <Label className="font-medium text-gray-500 flex-1">Over-Capacity Waitlist</Label>
                                                                                             <Label id="lux-toggle" className="w-[2.375rem] h-[1.5rem] flex-shrink-0 relative inline-block mb-0">
-                                                                                                <Switch className="transition-all duration-300 ease-in-out absolute cursor-pointer top-0 left-0 bottom-0 right-0"/>
+                                                                                                <Switch className="transition-all duration-300 ease-in-out absolute cursor-pointer top-0 left-0 bottom-0 right-0" />
                                                                                             </Label>
                                                                                         </div>
                                                                                         <div id="spread" className="gap-[.5rem] flex justify-between items-center">
@@ -513,23 +536,49 @@ export default function CreateEvents() {
                                                                 <div id="footnote" className="ml-7 text-[0.8125rem]">Waitlist Enabled</div>
                                                             </div>
                                                         </div>
-                                                        <div id="option-button" className="w-full p-[0.5rem_0.75rem] transition-all duration-300 ease-in-out relative overflow-hidden bg-gray-300">
-                                                            <div id="divider" className="absolute top-0 left-10 right-0 border-b border-solid border-gray-400 z-10"></div>
-                                                            <div id="lux-menu-trigger" className="cursor-pointer min-w-0 gap-[.5rem] flex-1 items-center">
-                                                                <div id="" className="gap-[.5rem] flex items-center">
-                                                                    <div id="icon" className="mr-1">
-                                                                        <Globe className="block w-4 h-4 align-middle" />
-                                                                    </div>
-                                                                    <div id="label" className="select-none flex-1">Visibility</div>
-                                                                    <div className="gap-[.25rem] flex items-center">
-                                                                        <div id="value" className="font-medium">Public</div>
-                                                                        <div id="accessory" className="transition-all duration-300 ease-in-out hover:text-white">
-                                                                            <ChevronsUpDown className="block w-4 h-4 align-middle" />
+                                                        <Popover>
+                                                            <PopoverTrigger asChild>
+                                                                <div id="option-button" className="w-full p-[0.5rem_0.75rem] transition-all duration-300 ease-in-out relative overflow-hidden bg-gray-300">
+                                                                    <div id="divider" className="absolute top-0 left-10 right-0 border-b border-solid border-gray-400 z-10"></div>
+                                                                    <div id="lux-menu-trigger" className="cursor-pointer min-w-0 gap-[.5rem] flex-1 items-center">
+                                                                        <div id="" className="gap-[.5rem] flex items-center">
+                                                                            <div id="icon" className="mr-1">
+                                                                                <Globe className="block w-4 h-4 align-middle" />
+                                                                            </div>
+                                                                            <div id="label" className="select-none flex-1">Visibility</div>
+                                                                            <div className="gap-[.25rem] flex items-center">
+                                                                                <div id="value" className="font-medium">Public</div>
+                                                                                <div id="accessory" className="transition-all duration-300 ease-in-out hover:text-white">
+                                                                                    <ChevronsUpDown className="block w-4 h-4 align-middle" />
+                                                                                </div>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
+                                                            </PopoverTrigger>
+                                                            <PopoverContent className="min-w-[120px] max-w-[260px]">
+                                                                <div id="rows" className="p-[.25rem_0.25rem]">
+                                                                    <div role="button" className="w-full box-border gap-[0.75rem] max-w-[260px] transition-all duration-300 ease-in-out p-[.375rem_.5rem] rounded-[0.25rem] relative z-[1] flex items-center m-0 bg-transparent border border-solid border-transparent leading-[1.5]">
+                                                                        <div id="icon" className="text-gray-500 flex-shrink-0">
+                                                                            <GlobeIcon className="block w-4 h-4 align-middle" />
+                                                                        </div>
+                                                                        <div id="text">
+                                                                            <div className="font-medium">Public</div>
+                                                                            <div className="text-[0.8125rem] text-gray-500 float-left">Shown on your calendar and eligible to be featured.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div role="button" className="w-full box-border gap-[0.75rem] max-w-[260px] transition-all duration-300 ease-in-out p-[.375rem_.5rem] rounded-[0.25rem] relative z-[1] flex items-center m-0 bg-transparent border border-solid border-transparent leading-[1.5]">
+                                                                        <div id="icon" className="text-gray-500 flex-shrink-0">
+                                                                            <Sparkles className="block w-4 h-4 align-middle" />
+                                                                        </div>
+                                                                        <div id="text">
+                                                                            <div className="font-medium">Private</div>
+                                                                            <div className="text-[0.8125rem] text-gray-500 float-left">Unlisted. Only people with the link can register.</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </PopoverContent>
+                                                        </Popover>
                                                     </div>
                                                 </div>
                                                 <div id="one-column-only" className="hidden">
