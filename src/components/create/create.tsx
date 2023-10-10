@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, ChevronsUpDown, Circle, Copy, Divide, FileImage, Globe, GlobeIcon, ImageIcon, Info, Map, MapPin, Pen, Sparkles, Ticket, UserCheck2, Video, Wallet } from "lucide-react";
+import { ArrowDown, ArrowUpToLine, CalendarIcon, CaseUpper, CheckCircle2, ChevronsUpDown, Circle, Copy, Divide, FileImage, Globe, GlobeIcon, ImageIcon, Info, Map, MapPin, Pen, PlusCircle, PlusIcon, Sparkles, Ticket, UserCheck2, Video, Wallet } from "lucide-react";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Input } from "../ui/input";
 import Image from "next/image"
@@ -54,20 +54,60 @@ export default function CreateEvents() {
                                         <div id="content-container" className="grid grid-cols-[1fr_1fr] gap-[2.5rem]">
                                             <div id="left" className="min-w-0">
                                                 <div>
-                                                    <div id="lux-menu-trigger" className="m-[-0.375rem_-0.625rem] p-[0.375rem_0.625rem] cursor-pointer rounded-[0.5rem] gap-[0.75rem] w-[240px] inline-flex min-w-0 leading-[1.3] items-center">
-                                                        <div id="avatar-wrapper small">
-                                                            <Avatar className="w-[1.5rem] h-[1.5rem] rounded-[1000px]">
-                                                                <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@donace" />
-                                                            </Avatar>
-                                                        </div>
-                                                        <div className="flex-1">
-                                                            <div className="text-[0.75rem] text-gray-500">Create under</div>
-                                                            <div className="font-[500] text-[0.875rem]">Personal Calendar</div>
-                                                        </div>
-                                                        <div id="chervon" className="text-gray-500">
-                                                            <ArrowDown className="block w-4 h-4 align-middle" />
-                                                        </div>
-                                                    </div>
+                                                    <Popover>
+                                                        <PopoverTrigger asChild>
+                                                            <div id="lux-menu-trigger" className="m-[-0.375rem_-0.625rem] p-[0.375rem_0.625rem] cursor-pointer rounded-[0.5rem] gap-[0.75rem] w-[240px] inline-flex min-w-0 leading-[1.3] items-center">
+                                                                <div id="avatar-wrapper small">
+                                                                    <Avatar className="w-[1.5rem] h-[1.5rem] rounded-[1000px]">
+                                                                        <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@donace" />
+                                                                    </Avatar>
+                                                                </div>
+                                                                <div className="flex-1">
+                                                                    <div className="text-[0.75rem] text-gray-500">Create under</div>
+                                                                    <div className="font-[500] text-[0.875rem]">Personal Calendar</div>
+                                                                </div>
+                                                                <div id="chervon" className="text-gray-500">
+                                                                    <ArrowDown className="block w-4 h-4 align-middle" />
+                                                                </div>
+                                                            </div>
+                                                        </PopoverTrigger>
+                                                        <PopoverContent className="absolute left-[-120px] max-h-[697px] rounded-[0.5rem] backdrop-blur-lg">
+                                                            <div id="lux-menu overflow">
+                                                                <div id="menu-content" className="max-w-[280px] p-1">
+                                                                    <div id="header" className="p-[0.25rem_0.5625rem] text-[0.75rem] text-gray-500">Choose the calendar of the event:</div>
+                                                                    <div id="calendar-selector-row" className="cursor-pointer p-[0.375rem_0.5625rem] gap-[0.75rem] rounded-[0.25rem] transition-all duration-300 ease-in-out flex items-center">
+                                                                        <div id="avatar-wrapper small">
+                                                                            <div id="avatar" className="w-5 h-5 rounded-[1000px] bg-center bg-cover relative">
+                                                                                <Avatar className="w-[1.5rem] h-[1.5rem] rounded-[1000px]">
+                                                                                    <AvatarImage src="https://avatars.githubusercontent.com/u/143386751?s=200&v=4" alt="@donace" />
+                                                                                </Avatar>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="gap-[.25rem] min-w-0 flex-1 flex items-center">
+                                                                            <div id="text" className="overflow-hidden text-ellipsis whitespace-nowrap pt-1">Personal Calendar</div>
+                                                                        </div>
+                                                                        <div id="check" className="transition-all duration-300 ease-in-out">
+                                                                            <CheckCircle2 className="block w-4 h-4 align-middle" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="calendar-selector-row" className="cursor-pointer p-[0.375rem_0.5625rem] gap-[0.75rem] rounded-[0.25rem] transition-all duration-300 ease-in-out flex items-center">
+                                                                        <div id="icon" className="p-[0px_0.125rem] flex-shrink-0 pt-1">
+                                                                            <PlusIcon className="block w-4 h-4 align-middle"/>
+                                                                        </div>
+                                                                        <div className="gap-[.25rem] min-w-0 flex-1 flex items-center">
+                                                                            <div id="text" className="overflow-hidden text-ellipsis whitespace-nowrap pt-1">Create Calendar</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="calendar-selector-row" className="p-[0.375rem_0.25rem] gap-[0.75rem] rounded-[0.25rem] text-gray-500 flex items-center">
+                                                                        <div id="icon" className="p-[0px_0.125rem] flex-shrink-0 pt-1">
+                                                                            <Info className="block w-4 h-4 align-middle" />
+                                                                        </div>
+                                                                        <div className="text-[0.75rem]">Creating the event under a calendar grants its admins manage access.</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </PopoverContent>
+                                                    </Popover>
                                                 </div>
                                                 <div id="one-column-only" className="hidden m-[0.75rem_0px]">
                                                     <div>
@@ -96,7 +136,7 @@ export default function CreateEvents() {
                                                     </div>
                                                 </div>
                                                 <div id="name-input-wrapper" className="h-[42px] m-[1.5rem_0px] flex">
-                                                    <Textarea className="h-[42px!important] leading-[1.3] overflow-hidden border-none bg-transparent p-0 text-[2rem] font-medium w-full resize-none m-0 shadow-none" spellCheck="false" autoCapitalize="words" placeholder="Event Name"/>
+                                                    <Textarea className="h-[42px!important] leading-[1.3] overflow-hidden border-none bg-transparent p-0 text-[2rem] font-medium w-full resize-none m-0 shadow-none" spellCheck="false" autoCapitalize="words" placeholder="Event Name" />
                                                 </div>
                                                 <div className="">
                                                     <div id="attribute-row" className="w-full gap-[0.75rem] mb-4 flex items-start">
