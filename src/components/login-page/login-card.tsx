@@ -55,6 +55,16 @@ export function LoginFormCard() {
               </div>
             </div>
           </form>
+          <form className="mt-4">
+            <div className="grid w-full items-center gap-4">
+              <div className="flex flex-col space-y-1.5">
+                <div className="flex justify-between items-center my-1">
+                  <Label htmlFor="name" className="text-[14px] font-medium leading-[14px]">Password</Label>
+                </div>
+                <Input type="password" className="font-medium rounded-[8px] inline-block leading-[16px]" id="name" placeholder="what is your password?" />
+              </div>
+            </div>
+          </form>
         </CardContent>
         <CardFooter className="flex justify-between">
           <div className="grid w-full grid-cols-1">
