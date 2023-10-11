@@ -17,12 +17,20 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link"
 import type { Metadata } from 'next'
 import { Smartphone } from "lucide-react"
+import { LoginAPI } from "@/shared/allApiHere"
 
 export const metadata: Metadata = {
   title: 'Donace Sign In'
 }
 
 export function LoginFormCard() {
+  async function DemoLogin() {
+    const uploadResponse = await LoginAPI({
+      email: "",
+      password: ""
+    })
+    console.log(uploadResponse)
+  }
   return (
     <div className="lg:max-w-[360px] rounded-2xl">
       <Card>
@@ -54,7 +62,7 @@ export function LoginFormCard() {
               <Button className="w-full col-span-1 bg-gray-950 font-medium leading-[24px]">Continue with Email</Button>
             </Link>
             <Separator className="w-full col-span-1 my-4" />
-            <Button className="w-full col-span-1" variant={"secondary"}>
+            <Button onClick={DemoLogin} className="w-full col-span-1" variant={"secondary"}>
               <div className="flex justify-between space-x-1.5 items-center">
                 <span className="w-[16px] h-[16px]"><FontAwesomeIcon icon={faGoogle} /></span>
                 <p>

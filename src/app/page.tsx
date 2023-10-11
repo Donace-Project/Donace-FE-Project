@@ -1,11 +1,13 @@
 "use client"
 import { Button } from "@/components/ui/button";
+import { LoginAPI } from "@/shared/allApiHere";
 import Link from "next/link";
 import React, { Suspense } from "react";
 import { SpinnerInfinity } from 'spinners-react';
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
 
 export default function Home() {
+
   return (
     <div className="container min-h-fit py-24">
       <div className="grid grid-cols-12 justify-center items-center">
@@ -15,7 +17,7 @@ export default function Home() {
               <p className="text-2xl font-bold text-muted-foreground">Donace</p>
             </div>
             {/* <p className="text-3xl inline-block my-2">Những sự kiện thú vị</p> */}
-            <h1 className="text-[4rem] leading-[1.03] font-medium mt-0 mb-4 text-white">
+            <h1 className="text-4xl leading-10 font-medium mt-0 mb-4 text-white">
               <div>
                 Delightful
                 <span className="hidden">&nbsp;</span>
@@ -38,7 +40,7 @@ export default function Home() {
           </div>
         </div>
         <div className="lg:col-span-2"></div>
-        <div className="w-[620px] h-[663px] flex-shrink-0 relative mr-[-40px] col-span-12 md:col-span-6 lg:col-span-6">
+        <div className="col-span-12 md:col-span-6 lg:col-span-6">
           <div className="my-10">
             <div className='col-span-1 md:col-span-6 h-[500px] flex justify-center items-center'>
               <Suspense fallback={<SpinnerInfinity size={200} enabled={true} />}>
