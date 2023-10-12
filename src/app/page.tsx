@@ -30,9 +30,9 @@ export default function Home() {
           </div>
           <div className="text-center md:text-left">
             <Link href={"/create"}>
-              <Button variant="secondary2">
+              <Button variant="default">
                 {/* <p className="text-lg">Tạo event đầu tiên ngay!</p>   */}
-                <div id="label" className="leading-[1] m-[-4px_0] p-[4px_0] overflow-hidden text-ellipsis">
+                <div id="label" className="leading-[1] text-white text-lg m-4 p-4 overflow-hidden  text-ellipsis">
                   Create Your First Event
                 </div>
               </Button>

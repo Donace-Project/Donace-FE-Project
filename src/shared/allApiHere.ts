@@ -24,8 +24,8 @@ export const LoginAPI = (body: LoginRequest) => {
         `${endpoint.DONACE_API_ENDPOINT}/Authentication/login`, {
         method: "POST",
         headers: {
+            Accept: "*/*",
             "content-type": "application/json",
-            "x-api-key": endpoint.DONACE_API_ENDPOINT,
         },
         body: JSON.stringify(body),
     })

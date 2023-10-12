@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -25,9 +26,10 @@ export const metadata: Metadata = {
 
 export function LoginFormCard() {
   async function DemoLogin() {
+    console.log("helo")
     const uploadResponse = await LoginAPI({
-      email: "",
-      password: ""
+      email: "tungnh230802@example.com",
+      password: "24446677734"
     })
     console.log(uploadResponse)
   }
