@@ -8,9 +8,9 @@ const AspectRatio = AspectRatioPrimitive.Root;
 export default function ExploreHome() {
   return (
     <div className="container-fluid">
-      <div className="m-auto max-w-xl">
-        <h3 className="m-0 text-2xl font-semibold">Explore</h3>
-        <h4 className="mb-3">Tech Events in Your City</h4>
+      <div className="m-auto max-w-xl mt-16">
+        <h3 className="m-0 text-2xl font-semibold text-white">Explore</h3>
+        <h4 className="mb-[4] mb text-white">Tech Events in Your City</h4>
         <div className="cities grid grid-rows-2 grid-flow-col gap-2">
           <div className="card">
             <a
