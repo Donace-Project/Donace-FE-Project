@@ -60,7 +60,7 @@ export default function MyCalendarPeople() {
                             <Link href={"/"} id="tab" className="border-b-2 border-solid border-b-gray-200 whitespace-nowrap inline-block pb-[0.5rem] cursor-pointer no-underline">
                                 People
                             </Link>
-                            <Link href={"/"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
+                            <Link href={"/my-calendar-newletters"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
                                 Newletters
                             </Link>
                             <Link href={"/"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
@@ -148,6 +148,5 @@ export default function MyCalendarPeople() {
                 </div>
             </div>
         </div>
-
     )
 }
