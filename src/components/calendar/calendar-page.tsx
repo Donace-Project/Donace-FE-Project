@@ -31,7 +31,7 @@ export default function CalendarHomePage(){
                     </div>
                     <div id="flex-column" className="gap-[0.75rem] flex flex-col">
                         <div id="calendar-grid" className="grid grid-cols-[repeat(auto-fill,minmax(12.5rem,_1fr))] gap-[0.75rem]">
-                            <Link href={"/"} className="p-[1rem_1rem_0.875rem] block relative rounded-[0.75rem] overflow-hidden no-underline bg-gray-100 box-border">
+                            <Link href={"/my-calendar"} className="p-[1rem_1rem_0.875rem] block relative rounded-[0.75rem] overflow-hidden no-underline bg-gray-100 box-border">
                                     <div className="min-h-[100%] flex justify-between flex-col">
                                         <div>
                                             <Avatar>

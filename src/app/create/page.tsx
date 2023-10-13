@@ -1,7 +1,7 @@
 import CreateEvents from "@/components/create/create";
 import { NavbarSignIn } from "@/components/layout/navbar-signin";
 
-export default function Page(){
+export default function Page(){ 
     return(
         <div className="box-border w-full h-full m-0">
             <div className="min-h-[100vh] pb-16">

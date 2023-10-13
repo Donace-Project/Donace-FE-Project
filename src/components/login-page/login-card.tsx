@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -17,12 +18,21 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link"
 import type { Metadata } from 'next'
 import { Smartphone } from "lucide-react"
+import { LoginAPI } from "@/shared/allApiHere"
 
 export const metadata: Metadata = {
   title: 'Donace Sign In'
 }
 
 export function LoginFormCard() {
+  async function DemoLogin() {
+    console.log("helo")
+    const uploadResponse = await LoginAPI({
+      email: "tungnh230802@example.com",
+      password: "24446677734"
+    })
+    console.log(uploadResponse)
+  }
   return (
     <div className="lg:max-w-[360px] rounded-2xl">
       <Card>
@@ -47,6 +57,16 @@ export function LoginFormCard() {
               </div>
             </div>
           </form>
+          <form className="mt-4">
+            <div className="grid w-full items-center gap-4">
+              <div className="flex flex-col space-y-1.5">
+                <div className="flex justify-between items-center my-1">
+                  <Label htmlFor="name" className="text-[14px] font-medium leading-[14px]">Password</Label>
+                </div>
+                <Input type="password" className="font-medium rounded-[8px] inline-block leading-[16px]" id="name" placeholder="what is your password?" />
+              </div>
+            </div>
+          </form>
         </CardContent>
         <CardFooter className="flex justify-between">
           <div className="grid w-full grid-cols-1">
@@ -54,7 +74,7 @@ export function LoginFormCard() {
               <Button className="w-full col-span-1 bg-gray-950 font-medium leading-[24px]">Continue with Email</Button>
             </Link>
             <Separator className="w-full col-span-1 my-4" />
-            <Button className="w-full col-span-1" variant={"secondary"}>
+            <Button onClick={DemoLogin} className="w-full col-span-1" variant={"secondary"}>
               <div className="flex justify-between space-x-1.5 items-center">
                 <span className="w-[16px] h-[16px]"><FontAwesomeIcon icon={faGoogle} /></span>
                 <p>
