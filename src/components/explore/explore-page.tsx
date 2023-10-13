@@ -1,62 +1,90 @@
+"use client";
 import { Building } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { AspectRatio } from "../ui/aspect-ratio";
-
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio";
+const AspectRatio = AspectRatioPrimitive.Root;
 
 export default function ExploreHome() {
-    return (
-        <div id="page-content" className="pt-[calc(3.25rem+1px)] box-border">
-            <div id="page-header" className="opacity-1 pt-[3rem] pl-[1rem_!important] pr-[1rem_!important] max-w-[820px] m-[0_auto] box-border">
-                <div className="gap-[.5rem] mb-[.5rem_!important] flex justify-between items-center">
-                    <h1 id="tab-title" className="text-[2rem] font-[600] mb-[0px] leading-[1.2] mt-[0]">Explore</h1>
-                </div>
-                <div></div>
-            </div>
-            <div className="pl-[1rem_!important] pr-[1rem_!important] max-w-[820px] m-[0_auto]">
-                <h1 className="text-[1.75rem] font-[400] leading-[1.2] text-gray-700">Tech Events in Your City</h1>
-                {/* <div id="cities" className="mt-[2.5rem] grid gap-[1.5rem]">
-                    <Link href={"/"} className="h-[300px] p-[1.375rem_1.5rem_1.5rem] rounded-[0.75rem] relative overflow-hidden flex justify-between flex-col no-underline from-orange-300">
-                        <div id="underlay-animated" className="absolute h-[100%] w-[100%] top-0 left-0"></div>
-                        <div id="building-wrapper" className="absolute h-[100%] w-[300px] right-[-50px] bottom-0">
-                            <img src="https://cdn.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=2,quality=75,width=300,height=300/discovery/london-card-dark.png" alt="img" />
-                        </div>
-                    </Link>
-                </div> */}
+  return (
+    <div className="container-fluid">
+      <div className="m-auto max-w-xl">
+        <h3 className="m-0 text-2xl font-semibold">Explore</h3>
+        <h4 className="mb-3">Tech Events in Your City</h4>
+        <div className="cities grid grid-rows-2 grid-flow-col gap-2">
+          <div className="card">
+            <a
+              href="#"
+              className="bg-cover bg-black drop-shadow-lg rounded-lg w-72 h-64"
+            >
+              <img
+                src="https://www.landmark81skyview.com/wp-content/uploads/2019/04/banner-day.png"
+                className="w-72 h-64 rounded-lg shadow hover:shadow-lg"
+                alt="hình ảnh"
+              />
+              <div className="card-img-overlay d-flex flex-column z-1 w-64">
+                <h5 className="card-title text-white absolute top-4 left-3 mb-auto text-xl font-semibold">
+                  Hồ Chí Minh
+                </h5>
+              </div>
+            </a>
+          </div>
 
-                <div className="grid grid-cols-12 gap-5 mt-20">
-                    <Link href={"/"} className="col-span-12 md:col-span-6 rounded">
-                        <AspectRatio ratio={4 / 3} className="bg-muted ">
-                            <Image
-                                src="https://picsum.photos/1000/1000?random=1"
-                                alt="Photo by Drew Beamer"
-                                fill
-                                className="object-cover rounded"
-                            />
-                        </AspectRatio>
-                    </Link>
-                    <div className="col-span-12 md:col-span-6 rounded">
-                        <AspectRatio ratio={4 / 3} className="bg-muted ">
-                            <Image
-                                src="https://picsum.photos/1000/1000?random=1"
-                                alt="Photo by Drew Beamer"
-                                fill
-                                className="object-cover rounded"
-                            />
-                        </AspectRatio>
-                    </div>
-                    <div className="col-span-12 md:col-span-6 rounded">
-                        <AspectRatio ratio={4 / 3} className="bg-muted ">
-                            <Image
-                                src="https://picsum.photos/1000/1000?random=1"
-                                alt="Photo by Drew Beamer"
-                                fill
-                                className="object-cover rounded"
-                            />
-                        </AspectRatio>
-                    </div>
-                </div>
-            </div>
+          <div className="card">
+            <a
+              href="#"
+              className="bg-cover bg-black drop-shadow-lg rounded-lg w-72 h-64"
+            >
+              <img
+                src="https://www.runglakimresort.com/Uploads/Images/tintuc/1280x904/quang-truong-lam-vien-ve-dem.jpg"
+                className="w-72 h-64 rounded-lg"
+                alt="hình ảnh"
+              />
+              <div className="card-img-overlay d-flex flex-column z-1 w-64">
+                <h5 className="card-title text-white absolute top-4 left-3 mb-auto text-xl font-semibold">
+                  Đà Lạt
+                </h5>
+              </div>
+            </a>
+          </div>
+
+          <div className="card">
+            <a
+              href="#"
+              className="bg-cover bg-black drop-shadow-lg rounded-lg w-72 h-64"
+            >
+              <img
+                src="https://cdnimg.vietnamplus.vn/uploaded/ivpycivo/2023_07_13/pho_co_hoi_an.png"
+                className="w-72 h-64 rounded-lg"
+                alt="hình ảnh"
+              />
+              <div className="card-img-overlay d-flex flex-column z-1 w-64">
+                <h5 className="card-title text-white absolute top-4 left-3 mb-auto text-xl font-semibold">
+                  Huế
+                </h5>
+              </div>
+            </a>
+          </div>
+
+          <div className="card">
+            <a
+              href="#"
+              className="bg-cover bg-black drop-shadow-lg rounded-lg w-72 h-64"
+            >
+              <img
+                src="https://media.vneconomy.vn/images/upload/2023/05/13/dbscl-4604.jpg"
+                className="w-72 h-64 rounded-lg"
+                alt="hình ảnh"
+              />
+              <div className="card-img-overlay d-flex flex-column z-1 w-64">
+                <h5 className="card-title text-white absolute top-4 left-3 mb-auto text-xl font-semibold">
+                  Cần Thơ
+                </h5>
+              </div>
+            </a>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
