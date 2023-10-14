@@ -4,7 +4,7 @@ export type EndPoint = {
     DONACE_API_ENDPOINT: string
 }
 export const endpoint: EndPoint = {
-    DONACE_API_ENDPOINT: "https://dev-be-du-an-tot-nghiep.azurewebsites.net/api",
+    DONACE_API_ENDPOINT: "https://localhost:8000",
 }
 
 export type BaseResponse<T> = {

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import * as React from "react"
 
 import { Button } from "@/components/ui/button"
@@ -28,8 +28,8 @@ export function LoginFormCard() {
   async function DemoLogin() {
     console.log("helo")
     const uploadResponse = await LoginAPI({
-      email: "tungnh230802@example.com",
-      password: "24446677734"
+      email: "bao@demo.com",
+      password: "bao123"
     })
     console.log(uploadResponse)
   }
