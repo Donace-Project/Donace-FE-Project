@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react"
-
+import  Axios  from "axios";
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -19,19 +19,44 @@ import Link from "next/link"
 import type { Metadata } from 'next'
 import { Smartphone } from "lucide-react"
 import { LoginAPI } from "@/shared/allApiHere"
+import { set } from "date-fns";
 
 export const metadata: Metadata = {
   title: 'Donace Sign In'
 }
 
 export function LoginFormCard() {
+
+  // Set email
+  const [inputEmail, setInputEmailValue] = React.useState('');
+  const handleInputEmailChange = (event) => {
+    setInputEmailValue(event.target.value);
+  };
+
+  //set password
+  const [inputPassword, setInputPasswordValue] = React.useState('');
+  const handleInputPasswordChange = (event) => {
+    setInputPasswordValue(event.target.value);
+  };
+
+
   async function DemoLogin() {
-    console.log("helo")
-    const uploadResponse = await LoginAPI({
-      email: "bao@demo.com",
-      password: "bao123"
-    })
-    console.log(uploadResponse)
+    const ModelLogin = {
+      email: inputEmail,
+      password: inputPassword
+    }
+    if(inputEmail.length === 0 || inputPassword.length === 0){
+      console.log('Please input enough information')
+    }
+    else{
+      await Axios.post(`http://34.126.111.117/api/Authentication/login`, ModelLogin,)
+                  .then(res => {
+                    console.log(res);
+                  })
+                  .catch(res => {
+                    console.log(res);
+                  })
+    }
   }
   return (
     <div className="lg:max-w-[360px] rounded-2xl">
@@ -53,7 +78,7 @@ export function LoginFormCard() {
                     </Link>
                   </Label>
                 </div>
-                <Input className="font-medium rounded-[8px] inline-block leading-[16px]" id="name" placeholder="your@email.com" />
+                <Input value={inputEmail} onChange={handleInputEmailChange} className="font-medium rounded-[8px] inline-block leading-[16px]" id="email" placeholder="your@email.com" />
               </div>
             </div>
           </form>
@@ -63,7 +88,7 @@ export function LoginFormCard() {
                 <div className="flex justify-between items-center my-1">
                   <Label htmlFor="name" className="text-[14px] font-medium leading-[14px]">Password</Label>
                 </div>
-                <Input type="password" className="font-medium rounded-[8px] inline-block leading-[16px]" id="name" placeholder="what is your password?" />
+                <Input value={inputPassword} onChange={handleInputPasswordChange} type="password" className="font-medium rounded-[8px] inline-block leading-[16px]" id="password" placeholder="what is your password?" />
               </div>
             </div>
           </form>
