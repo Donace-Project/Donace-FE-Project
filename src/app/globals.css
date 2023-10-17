@@ -48,6 +48,19 @@
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
   }
+
+}
+.header-scrolled {
+  position: fixed;
+  border-bottom: 1px solid transparent;
+  z-index: 10;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  /* Tùy chỉnh giá trị để đạt được hiệu ứng tương tự */
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(rgba(63, 78, 215, 0.2) 0%, rgba(61, 143, 245, 0.1) 50%, rgba(106, 189, 207, 0) 100%);
+  /* Đổi màu nền tiêu đề khi cuộn */
+  /* Thêm các thuộc tính CSS khác cần thiết */
 }
 
 
@@ -68,9 +81,9 @@
   }
 }
 
-.bg-image {
+/* .bg-image {
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2897807.jpg&f=1&nofb=1&ipt=5d4945c54cd8d69018672e948c4baf59e26af393316ba42a592cd43d8611ce40&ipo=images");
-}
+} */
 
 .start-here {
   background: radial-gradient(circle at top left, #099ef1 0%, #6863f8 18.82%, #d84ffa 32.6%, #f058c5 52.83%, #ff4f90 68.03%, #ff6558 87.66%, #ff891f 100%);

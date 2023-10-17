@@ -36,6 +36,8 @@ import { Button } from "../ui/button";
 
 // test commit
 
+
+
 export function NavbarSignIn() {
     return (
         <div id="nav-wrapper" className="fixed border-b-[1px] border-solid border-transparent z-[10] w-full backdrop-blur-lg transition-all duration-300 ease-in-out">

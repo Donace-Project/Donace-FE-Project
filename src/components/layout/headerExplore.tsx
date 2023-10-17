@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from 'react';
 
 
-export default function Header() {
+export default function HeaderExplore() {
     const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function Header() {
                                         <div id="label">Calendars</div>
                                     </div>
                                 </Link>
-                                <Link href={"/explore"} className="text-[rgba(19,21,23,0.36)] hover:text-[rgb(19,21,23)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
+                                <Link href={"/explore"} className="text-[rgb(19,21,23)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
                                     <div className="gap-[.5rem] flex items-center">
                                         <div id="icon">
                                             <Compass className="block w-4 h-4 align-middle" />

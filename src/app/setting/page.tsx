@@ -6,7 +6,7 @@ export default function Page(){
         <div className="box-border w-[100%] h-[100%] m-0">
             <div className="min-h-[100vh] pb-[4rem]">
                 <div className="z-10">
-                    <NavbarSignIn/>
+                    {/* <NavbarSignIn/> */}
                 </div>
                 <div>
                     <SettingPage/>

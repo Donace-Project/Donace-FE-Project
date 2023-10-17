@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from 'react';
 
 
-export default function Header() {
+export default function HeaderHome() {
     const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Header() {
                     <div id="center-and-right" className="flex justify-between items-center flex-1 max-w-[calc(820px+((100%-820px)/2))]">
                         <div id="center-wrapper">
                             <div id="center-links" className="gap-5 p-[0_1rem] text-[0.875rem] flex items-baseline max-w-[820px] m-[0_auto]">
-                                <Link href={"/home"} className="text-[rgba(19,21,23,0.36)] hover:text-[rgb(19,21,23)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
+                                <Link href={"/home"} className="text-[rgb(19,21,23)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
                                     <div className="gap-[.5rem] flex items-center">
                                         <div id="icon">
                                             <Ticket className="block w-4 h-4 align-middle" />
