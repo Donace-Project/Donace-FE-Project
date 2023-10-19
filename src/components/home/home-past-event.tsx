@@ -12,22 +12,23 @@ const customRight = `calc((1 - 0.5 - 0.1) * 1.125rem)`;
 export default function HomePastEvent() {
     return (
         <div>
-            <div id="page-content" className="pt-[calc(3.25rem+1px)] box-border">
+            <div id="page-content" className="pt-1 box-border">
                 <div id="page-header" className="opacity-1 pt-[3rem] pl-[1rem_!important] pr-[1rem_!important] max-w-[820px] m-[0_auto]">
                     <div id="" className="gap-[.5rem] mb-[.5rem_!important] flex justify-between items-center">
                         <h1 id="tab-title" className="text-[2rem] font-[600] mb-[0px] leading-[1.2]">Events</h1>
-                        <div id="lux-button-switcher always" className="min-w-[auto] p-[0.125rem] overflow-hidden rounded-[0.5rem]">
-                            <div id="segment" className="grid relative grid-cols-2">
-                                <Link href="/home">
-                                    <Button variant="ghostSignin" className="text-[0.8rem] p-[0.25rem_0.5rem]">
-                                        <div className="z-2 relative">Upcoming</div>
-                                    </Button>
+                        <div id="lux-button-switcher always" className="min-w-[auto] p-[0.125rem] m-[-0.25rem_0px] overflow-hidden rounded-[0.5rem] bg-[rgba(19,21,23,0.04)]">
+                            <div id="segment" className="grid grid-cols-2 relative">
+                                <Link href={"/home"} className="text-[rgba(19,21,23,0.36)] relative justify-center cursor-pointer transition-all duration-300 ease-in-out outline-0 font-medium flex items-center leading-[1.5]">
+                                    <button type="button" className="hover:text-gray-800 text-[0.8rem] p-[0.25rem_0.5rem] text-[rgba(19,21,23,0.36)] relative rounded-none justify-center cursor-pointer transition-all duration-300 ease-in-out outline-0 font-medium flex items-center m-0 bg-transparent border border-solid border-transparent leading-[1.5]">
+                                        <div className="z-[2] relative">Upcoming</div>
+                                    </button>
                                 </Link>
-                                <Link href={"/home-past-event"}>
-                                    <Button variant="secondary" className="text-[0.8rem] p-[0.25rem_0.5rem]">
-                                        <div>Past</div>
-                                    </Button>
+                                <Link href={""} className="text-[rgba(19,21,23,0.36)] relative justify-center cursor-pointer transition-all duration-300 ease-in-out outline-0 font-medium flex items-center leading-[1.5]">
+                                    <button type="button" className="text-[0.8rem] p-[0.25rem_0.5rem] text-[rgb(19,21,23)] relative rounded-none justify-center cursor-pointer transition-all duration-300 ease-in-out outline-0 font-medium flex items-center m-0 bg-transparent border border-solid border-transparent leading-[1.5]">
+                                        <div className="z-[2] relative ">Past</div>
+                                    </button>
                                 </Link>
+                                <div id="slider" className="left-[50%] pointer-events-none bg-[#fff] rounded-[calc(0.5rem/1.25)] w-[calc(100%/2)] shadow-md absolute h-full z-[1] transition-all duration-300 ease-in-out"></div>
                             </div>
                         </div>
                     </div>
@@ -36,18 +37,18 @@ export default function HomePastEvent() {
                 <div className="p-[2rem_1rem_1rem] max-w-[var(820px)] m-[0_auto]" id="load-more-observer"></div>
                 <div className="min-h-[1px]"></div>
             </div>
-            <div id="zm-container" className="gap-[3rem] p-[1rem] pt-[2rem] max-w-[820px] m-[0_auto] box-border">
+            <div id="zm-container" className="gap-12 p-4 pt-0 max-w-[820px] m-[0_auto] box-border">
                 <div id="timeline">
                     <div id="timeline-section" className="relative flex w-full gap-[4rem] pb-[3rem]">
                         <div id="line" className="absolute top-[1.5rem] bottom-0 left-[calc(7rem+4rem/2)] border-l-[0.125rem] border-dashed"></div>
                         <div id="title-away" className="relative z-[5] w-[7rem]">
                             <div id="container" className="sticky top-[var(4.5rem)]">
                                 <div id="timeline-title">
-                                    <div id="content">
-                                        <div id="date" className="font-[500]">
+                                    <div id="content" className="transition-all duration-300 ease-in-out">
+                                        <div id="date" className="font-medium">
                                             Sep 5
                                         </div>
-                                        <div id="weekday">
+                                        <div id="weekday" className="text-[rgba(19,21,23,0.36)]">
                                             Friday
                                         </div>
                                     </div>
@@ -55,53 +56,53 @@ export default function HomePastEvent() {
                             </div>
                             <div id="dot-outer-wrapper" className="absolute top-[0.375rem] right-[calc(-2rem-0.4375rem)] justify-center flex items-center">
                                 <div id="dot-wrapper" className="justify-center flex items-center">
-                                    <div id="dot" className="w-[0.75rem] h-[0.75rem] border-2 border-custom rounded-[100%]"></div>
+                                    <div id="dot" className="w-3 h-3 border-2 bg-[#fff] border-solid border-[rgba(19,21,23,0.2)] rounded-full"></div>
                                 </div>
                             </div>
                         </div>
-                        <div className="min-w-[0] flex-[1_1]">
+                        <div className="min-w-0 flex-1">
                             <div id="card-wrapper" className="p-[0.75rem_0.75rem_0.75rem_1rem]">
-                                <div className="p-[0.75rem_0.75rem_0.75rem_1rem] relative rounded-[0.75rem] bg-gray-100 overflow-hidden">
-                                    <Link href={"/"} className="absolute no-underline">
+                                <div id="content-card" className="p-[0.75rem_0.75rem_0.75rem_1rem] cursor-pointer transition-shadow duration-[0.3s] ease-in-out relative rounded-[0.75rem] bg-[rgba(255,255,255,0.8)] border border-solid border-[#fff] overflow-hidden">
+                                    <Link href={""} className="ring-0 absolute transition-all duration-300 ease-in-out cursor-pointer no-underline">
                                         &nbsp;
                                     </Link>
-                                    <div id="event-content" className="gap-[0.75rem] flex flex-col">
+                                    <div id="event-content" className="gap-3 flex flex-col">
                                         <div id="info-and-cover" className="flex-row-reverse gap-4 flex">
                                             <div id="cover-image" className="pointer-events-none">
                                                 <div className="w-[200px]">
-                                                    <div className="w-[100%] bg-gray-100 overflow-hidden relative rounded-[0.5rem] pb-[50%]">
+                                                    <div id="img-aspect-ratio" className="pb-[50%] w-full bg-[rgba(19,21,23,0.04)] overflow-hidden relative rounded-[0.5rem]">
                                                         {/* giữ lại thuộc tính css, đổi div thành hình ảnh nếu có */}
                                                         <div className="absolute top-0 left-0 w-[100%] h-[100%] object-cover align-middle">
-                                                            đây là hình ảnh
+                                                            Đây là hình ảnh
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="info" className="gap-[0.5rem] min-w-[0] flex-[1_1] flex flex-col">
+                                            <div id="info" className="gap-2 min-w-0 flex-1 flex flex-col">
                                                 <div id="event-time" className="gap-[.5rem] flex items-center">
-                                                    <div className="min-w-[0] overflow-hidden text-ellipsis whitespace-nowrap bg-gray-100">
+                                                    <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[rgba(19,21,23,0.36)]">
                                                         <span id="time">12:12PM</span>
                                                     </div>
                                                 </div>
                                                 <div className="text-[1.25rem]">
-                                                    <h3 className="inline text-[1.25rem] font-[500] break-words leading-[1.2] mt-[0] mb-[1rem]">
+                                                    <h3 className="inline text-[1.25rem] font-medium break-words leading-[1.2] mt-0 mb-4">
                                                         Happy Bee
                                                     </h3>
                                                 </div>
                                                 <div className="gap-[.25rem] flex flex-col">
-                                                    <div id="attribute" className="text-[1rem] bg-gray-100 gap-[.5rem] flex items-start">
-                                                        <div id="icon" className="h-custom-icon text-[1rem] flex items-center">
-                                                            <MapPin className="w-[1rem] h-[1rem] block align-middle" />
+                                                    <div id="attribute" className="text-[1rem] text-[rgba(19,21,23,0.36)] gap-[.5rem] flex items-start">
+                                                        <div id="icon" className="h-[calc(1rem*1.5)] text-[1rem] flex items-center">
+                                                            <MapPin className="w-4 h-4 block align-middle" />
                                                         </div>
-                                                        <div className="text-[1rem] min-w-[0]">
+                                                        <div className="text-[1rem] min-w-0">
                                                             Ho Chi Minh City
                                                         </div>
                                                     </div>
-                                                    <div id="attribute" className="text-[1rem] bg-gray-100 gap-[.5rem] flex items-start">
-                                                        <div id="icon" className="h-custom-icon text-[1rem] flex items-center">
-                                                            <User2 className="w-[1rem] h-[1rem] block align-middle" />
+                                                    <div id="attribute" className="text-[1rem] text-[rgba(19,21,23,0.36)] gap-[.5rem] flex items-start">
+                                                        <div id="icon" className="h-[calc(1rem*1.5)] text-[1rem] flex items-center">
+                                                            <User2 className="w-4 h-4 block align-middle" />
                                                         </div>
-                                                        <div className="text-[1rem] min-w-[0]">
+                                                        <div className="text-[1rem] min-w-0">
                                                             Approved Guest
                                                         </div>
                                                     </div>
@@ -111,11 +112,11 @@ export default function HomePastEvent() {
                                         <div id="event-bottom-bar" className="flex justify-between items-center">
                                             <div className="gap-[.5rem] flex items-center">
                                                 <div id="status-or-price" className="flex">
-                                                    <Link href={"/"} className="bg-slate-200 border-transparent border border-solid p-[0.4375rem_0.625rem] text-[0.875rem] gap-[0.375rem] h-[calc(1.75rem+2*1px)] font-[500] rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-[2px] outline outline-transparent max-w-[100%] w-fit flex items-center cursor-pointer no-underline">
+                                                    <Link href={""} className="text-[rgba(19,21,23,0.64)] bg-[rgba(19,21,23,0.04)] border-transparent border border-solid p-[0.4375rem_0.625rem] text-[0.875rem] gap-[0.375rem] transition-[all 0.3s cubic-bezier(0.4,0,0.2,1)] h-[calc(1.75rem+2*1px)] font-medium rounded-[0.5rem] relative whitespace-nowrap justify-center outline-offset-[.125rem] outline-none max-w-full w-fit flex items-center cursor-pointer no-underline">
                                                         <div id="label" className="leading-[1] m-[-4px_0] p-[4px_0] overflow-hidden text-ellipsis">
                                                             Manage Event
                                                         </div>
-                                                        <ArrowRight className="ml-[var(0.375rem)] stroke-[2.5] w-[1rem] h-[1rem] flex-shrink-0 block align-middle" />
+                                                        <ArrowRight className="ml-[0.375rem] stroke-[2.5] w-4 h-4 flex-shrink-0 block align-middle" />
                                                     </Link>
                                                 </div>
                                                 <div id="heads" className="flex items-center">
@@ -140,38 +141,38 @@ export default function HomePastEvent() {
                             </div>
                         </div>
                     </div>
-                    <div id="timeline-section" className="pb-[0px] relative flex w-full gap-[4rem] box-border">
-                        <div id="line" className="top-[1.5rem] absolute bottom-0 left-[calc(7rem+4rem/2)] border-l-[0.125rem] border-dashed"></div>
-                        <div id="title-aways" className="relative z-[5] w-[7rem]">
+                    <div id="timeline-section" className="pb-0 relative flex w-full gap-16 box-border">
+                        <div id="line" className="top-6 absolute bottom-0 left-[calc(7rem+4rem/2)] border-l-[0.125rem] border-dashed"></div>
+                        <div id="title-aways" className="relative z-[5] w-28">
                             <div id="container" className="sticky top-[4.5rem]">
                                 <div id="timeline-title">
                                     <div id="content">
-                                        <div id="date" className="font-[500]">
+                                        <div id="date" className="font-medium">
                                             Dec 12
                                         </div>
-                                        <div id="weekday" className="">
+                                        <div id="weekday" className="text-[rgba(19,21,23,0.36)]">
                                             Friday
                                         </div>
                                     </div>
                                 </div>
                                 <div id="dot-outer-wrapper" className="absolute top-[0.375rem] right-[calc(-2rem-0.4375rem)] justify-center flex items-center">
-                                <div id="dot-wrapper" className="justify-center flex items-center">
-                                    <div id="dot" className="w-[0.75rem] h-[0.75rem] border-2 border-custom rounded-[100%]"></div>
+                                    <div id="dot-wrapper" className="justify-center flex items-center">
+                                        <div id="dot" className="w-3 h-3 border-2 bg-[#fff] border-solid border-[rgba(19,21,23,0.2)] rounded-full"></div>
+                                    </div>
                                 </div>
                             </div>
-                            </div>
                         </div>
-                        <div className="min-w-[0] flex-[1_1]">
-                            <div id="card-wrapper" className="mb-[1rem] p-[0.75rem_0.75rem_0.75rem_1rem]">
-                                <div id="content-card" className="p-[0.75rem_0.75rem_0.75rem_1rem] cursor-pointer relative rounded-[0.75rem] bg-gray-100 border-[1px] border-solid overflow-hidden">
+                        <div className="min-w-0 flex-1">
+                            <div id="card-wrapper" className="mb-4 p-[0.75rem_0.75rem_0.75rem_1rem]">
+                                <div id="content-card" className="p-[0.75rem_0.75rem_0.75rem_1rem] cursor-pointer transition-shadow duration-[0.3s] ease-in-out relative rounded-[0.75rem] bg-[rgba(255,255,255,0.8)] border border-solid border-[#fff] overflow-hidden">
                                     <Link id="event-link-content" href={"/"} className="absolute cursor-pointer no-underline">
                                         &nbsp;
                                     </Link>
-                                    <div id="event-content" className="gap-[0.75rem] flex flex-col">
-                                        <div id="info-and-cover" className="flex-row-reverse gap-[1rem] flex">
+                                    <div id="event-content" className="gap-3 flex flex-col">
+                                        <div id="info-and-cover" className="flex-row-reverse gap-4 flex">
                                             <div id="cover-image" className="pointer-events-none">
                                                 <div className="w-[200px]">
-                                                    <div id="img-aspect-ratio" className="pb-[50%] w-full bg-gray-100 overflow-hidden relative rounded-[0.5rem]">
+                                                    <div id="img-aspect-ratio" className="pb-[50%] w-full bg-[rgba(19,21,23,0.04)] overflow-hidden relative rounded-[0.5rem]">
                                                         {/* đây là hình, đổi div thành img giữ css */}
                                                         <div className="absolute top-0 left-0 w-full h-full object-none align-middle">
                                                             Đây là hình ảnh
@@ -181,15 +182,15 @@ export default function HomePastEvent() {
                                             </div>
                                             <div id="info" className="gap-[0.5rem] min-w-[0] flex-[1_1] flex flex-col">
                                                 <div id="event-time" className="gap-[.5rem] flex items-center">
-                                                    <div className="overflow-hidden text-ellipsis whitespace-nowrap bg-gray-100">
+                                                    <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[rgba(19,21,23,0.36)]">
                                                         <span>12:00PM</span>
                                                     </div>
                                                 </div>
                                                 <div className="text-[1.25rem]">
-                                                    <h3 className="inline text-[1.25rem] font-[500] break-words leading-[1.2] mt-[0] mb-[1rem]">Họp Hội Đồng Donace</h3>
+                                                    <h3 className="inline text-[1.25rem] font-medium break-words leading-[1.2] mt-0 mb-4">Họp Hội Đồng Donace</h3>
                                                 </div>
                                                 <div className="gap-[.25rem] flex flex-col">
-                                                    <div id="attribute" className="text-[1rem] bg-gray-100 gap-[.5rem] flex items-start">
+                                                    <div id="attribute" className="text-[1rem] text-[rgba(19,21,23,0.36)] gap-[.5rem] flex items-start">
                                                         <div id="icon" className="h-custom-icon text-[1rem] flex items-center">
                                                             <div id="heads" className="flex items-center">
                                                                 <div id="head" className="relative flex items-start">
@@ -213,7 +214,7 @@ export default function HomePastEvent() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div id="attribute" className="text-[1rem] bg-gray-100 gap-[.5rem] flex items-start">
+                                                    <div id="attribute" className="text-[1rem] text-[rgba(19,21,23,0.36)] gap-[.5rem] flex items-start">
                                                         <div id="icon" className="h-custom-icon text-[1rem] flex items-center">
                                                             <MapPin className="w-[1rem] h-[1rem] block align-middle" />
                                                         </div>

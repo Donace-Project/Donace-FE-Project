@@ -94,12 +94,12 @@ export function NavbarSignIn() {
                         </Link>
                         <DropdownMenu>
                         </DropdownMenu>
-                        <Link href={"/"} >
+                        <Link href={""} >
                             <div>
                                 <DropdownMenu>
                                     <DropdownMenuTrigger asChild>
                                         <Button variant="nothing" className="p-[0.25rem_0.5rem] m-[-0.25rem_-0.5rem] relative inline-flex min-w-0">
-                                            <Bell className="block w-[1rem] h-[1rem] align-middle" />
+                                            <Bell className="block w-4 h-4 align-middle" />
                                         </Button>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent className="w-[300px] max-w-[300px] min-h-[300px] max-h-[60vh] overflow-auto">
