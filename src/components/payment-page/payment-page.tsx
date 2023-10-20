@@ -46,7 +46,6 @@ export default function PaymentPage() {
     // };
 
     return (
-
         <div id="page-content" className="box-border">
             <div id="sticky-page-header" className="hidden fixed w-[100%] top-[0px] pt-[0.25rem] z-10">
                 <div id="zm-container" className="opacity-0 gap-[1rem] pl-[1rem_!important] pr-[1rem_!important] flex justify-between items-center max-w-[820px] m-[0_auto]">
@@ -77,53 +76,53 @@ export default function PaymentPage() {
             </div>
             <div id="page-header zm-container" className="opacity-[2] pt-[3rem] pl-[1rem!important] pr-[1rem!important] max-w-[820px] m-[0_auto]">
                 <div className="gap-[.5rem] mb-[.5rem!important] flex justify-between items-center">
-                    <h1 id="tab-title" className="text-[2rem] font-[600] mb-[0px] leading-[1.2] mt-[0]">Settings</h1>
+                    <h1 id="tab-title" className="text-[2rem] font-semibold mb-[0px] leading-[1.2] mt-[0]">Settings</h1>
                 </div>
                 <div></div>
             </div>
-            <div id="tab-wrapper" className="m-auto pt-[0.5rem]">
+            <div id="tab-wrapper" className="m-auto pt-2">
                 <div id="zm-container" className="pt-[.25rem!important] max-w-[820px] m-[0_auto]">
                     <div id="page-header-tabs-wrapper" className="flex justify-between items-baseline">
-                        <div id="tabs" className="flex max-w-[100%] overflow-auto min-w-[0] gap-[1rem] flex-[1_1]">
-                            <div id="side-padding" className="pl-[var(1rem)-1rem]">&nbsp;</div>
-                            <Link href={"/setting"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
+                        <div id="tabs" className="flex max-w-full overflow-auto min-w-[0] gap-4 flex-1">
+                            <div id="side-padding" className="pl-[calc(1rem-1rem)]">&nbsp;</div>
+                            <Link href={"/setting"} id="tab" className="whitespace-nowrap inline-block text-[rgba(19,21,23,0.36)] pb-2 border-b-2 border-solid border-transparent cursor-pointer no-underline">
                                 Account
                             </Link>
-                            <Link href={"/preferences"} id="tab" className="text-gray-300 whitespace-nowrap inline-block pb-[0.5rem] border-b-2 border-solid border-b-transparent cursor-pointer no-underline">
+                            <Link href={"/preferences"} id="tab" className="whitespace-nowrap inline-block text-[rgba(19,21,23,0.36)] pb-2 border-b-2 border-solid border-transparent cursor-pointer no-underline">
                                 Preferences
                             </Link>
-                            <Link href={"/payment"} id="tab" className="border-b-2 border-solid border-b-gray-200 whitespace-nowrap inline-block pb-[0.5rem] cursor-pointer no-underline">
+                            <Link href={"/payment"} id="tab" className="text-[rgb(19,21,23)] border-b-2 border-solid border-[rgb(19,21,23)] whitespace-nowrap inline-block pb-2 cursor-pointer no-underline">
                                 Payment
                             </Link>
-                            <div id="side-padding" className="pl-[var(1rem)-1rem]"></div>
+                            <div id="side-padding" className="pl-[calc(1rem-1rem)]"></div>
                         </div>
                     </div>
                 </div>
-                <div id="tab-title-divider" className="border-b-[1px] border-solid border-gray-200 mb-[1.75rem]"></div>
+                <div id="tab-title-divider" className="border-b border-solid border-[rgba(19,21,23,0.08)] mb-7"></div>
             </div>
             <div id="zm-container" className="pl-[1rem!important] pr-[1rem!important] max-w-[820px] m-[0_auto]">
                 <div id="can-divide with-divider medium">
                     <div id="section-title-wrapper medium">
                         <div id="section-title-row" className="mb-[1.25rem] flex justify-between items-center">
-                            <h2 className="text-[1.25rem] font-[600] mb-[0] leading-[1.2] mt-[0]">Payment Methods</h2>
+                            <h2 className="text-[1.25rem] font-[600] mb-[0] leading-[1.2] mt-[0] text-[rgb(19,21,23)]">Payment Methods</h2>
                             <div id="right-element" className="m-[-.25rem_0]"></div>
                         </div>
-                        <div id="section-subtitle" className="mt-[-.875rem] mb-[1.25rem] text-gray-600 text-[1rem]">Your saved payment methods are encrypted and stored securely by Stripe.</div>
+                        <div id="section-subtitle" className="mt-[-.875rem] mb-[1.25rem] text-[#737577] text-[1rem]">Your saved payment methods are encrypted and stored securely by Stripe.</div>
                     </div>
                     <Dialog>
                         <DialogTrigger asChild>
-                            <Button type="submit" className="mt-[1.5rem!important] cursor-pointer font-[500] relative whitespace-nowrap justify-center outline-offset-[.125rem] max-w-[100%] text-[1rem] p-[0.625rem_0.875rem] w-fit flex items-center m-0 leading-[1.5]">
+                            <Button variant="nothing" type="submit" className="text-[#fff] bg-[#333537] border-[#333537] border border-solid mt-[1.5rem!important] cursor-pointer font-medium relative whitespace-nowrap justify-center outline-offset-[.125rem] max-w-full text-base p-[0.625rem_0.875rem] w-fit flex items-center m-0 leading-[1.5]">
                                 <Plus className="mr-[0.5rem] stroke-[2.5] w-[1rem] h-[1rem] block align-middle" />
                                 <div id="label" className="leading-[1] m-[-4px_0] p-[4px_0] overflow-hidden text-ellipsis">Add Card</div>
                             </Button>
                         </DialogTrigger>
-                        <DialogContent className="sm:max-w-[425px]">
+                        <DialogContent className="sm:max-w-[425px] rounded-3xl">
                             <DialogHeader>
-                                <div id="icon-wrapper" className="mb-[0.875rem] w-[3rem] h-[3rem] bg-gray-200 rounded-[1000px]">
+                                <div id="icon-wrapper" className="mb-[0.875rem] w-[3rem] h-[3rem] text-[#737577] bg-[rgba(19,21,23,0.04)] rounded-full">
                                     <Wallet className="w-[2rem] h-[2rem] ml-[0.5rem] mt-[0.5rem]" />
                                 </div>
                                 <DialogTitle className="font-[600] text-[1.25rem] mb-[0.5]">Add Card</DialogTitle>
-                                <DialogDescription>
+                                <DialogDescription className="text-[rgba(19,21,23,0.64)]">
                                     Add a card to quickly buy tickets or pay for Donace Plus. Your information is encrypted and securely processed by Stripe.
                                 </DialogDescription>
                             </DialogHeader>
@@ -149,7 +148,7 @@ export default function PaymentPage() {
                                 </PaymentInputsWrapper>
                             </div>
                             <DialogFooter>
-                                <Button type="submit" className="w-full cursor-pointer font-[500] relative whitespace-nowrap justify-center outline-offset-[.125rem] max-w-[100%] text-[1rem] p-[0.625rem_0.875rem] flex items-center m-0 leading-[1.5]">
+                                <Button variant="nothing" type="submit" className="text-[#fff] bg-[#333537] border border-solid border-[#333537] w-full cursor-pointer font-[500] relative whitespace-nowrap justify-center outline-offset-[.125rem] max-w-[100%] text-[1rem] p-[0.625rem_0.875rem] flex items-center m-0 leading-[1.5]">
                                     <div id="label" className="leading-[1] m-[-4px_0] p-[4px_0] overflow-hidden text-ellipsis">
                                         Add Card
                                     </div>
@@ -158,21 +157,21 @@ export default function PaymentPage() {
                         </DialogContent>
                     </Dialog>
                 </div>
-                <div id="can-divide with-divider medium" className="mt-[2rem] pt-[2rem] border-t-[1px] border-solid border-gray-200">
+                <div id="can-divide with-divider medium" className="mt-8 pt-8 border-t border-solid border-[rgba(19,21,23,0.08)]">
                     <div id="section-title-wrapper medium">
                         <div id="section-title-row" className="mb-[1.25rem] flex justify-between items-center">
-                            <h2 className="text-[1.25rem] font-[600] mb-[0] leading-[1.2] mt-[0]">Payment History</h2>
+                            <h2 className="text-[1.25rem] font-[600] mb-[0] leading-[1.2] mt-[0] text-[rgb(19,21,23)]">Payment History</h2>
                             <div id="right-element" className="m-[-.25rem_0]"></div>
                         </div>
                     </div>
                     <div id="lux-empty-state" className="text-center mt-[4rem] flex flex-col items-center">
                         <div id="icon" className="justify-center flex items-center">
                             <div className="mb-[-64px]">
-                                <Receipt className="w-[250px] h-auto block align-middle" />
+                                <Receipt className="w-[250px] h-auto block align-middle text-gray-300" />
                             </div>
                         </div>
-                        <h3 className="text-[1.5rem] font-[500] p-[0!important] mt-[5.5rem!important] mb-[0!imporant] leading-[1.2]">No Payments</h3>
-                        <div className="pl-[3rem] pr-[3rem] text-gray-500 mt-[.5rem!important]">You have not made any payments on Donace.</div>
+                        <h3 className="text-[1.5rem] font-medium p-[0!important] mt-[5.5rem!important] mb-[0!imporant] leading-[1.2] text-[rgba(19,21,23,0.64)]">No Payments</h3>
+                        <div className="pl-[3rem] pr-[3rem] text-[rgba(19,21,23,0.36)] mt-[.5rem!important]">You have not made any payments on Donace.</div>
                     </div>
                 </div>
             </div>
