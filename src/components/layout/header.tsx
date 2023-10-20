@@ -59,7 +59,7 @@ export default function Header() {
                 <div id="center-and-right" className="flex justify-between items-center flex-1 max-w-[calc(820px+((100%-820px)/2))]">
                     <div id="center-wrapper">
                         <div id="center-links" className="gap-5 p-[0_1rem] text-[0.875rem] flex items-baseline max-w-[820px] m-[0_auto]">
-                            <Link href={"/home"} className="text-[rgba(19,21,23,0.36)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
+                            <Link href={"/home"} className="text-[rgba(19,21,23,0.36)] hover:text-[rgb(19,21,23)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
                                 <div className="gap-[.5rem] flex items-center">
                                     <div id="icon">
                                         <Ticket className="block w-4 h-4 align-middle" />
@@ -67,7 +67,7 @@ export default function Header() {
                                     <div id="label">Events</div>
                                 </div>
                             </Link>
-                            <Link href={"/calendar"} className="text-[rgba(19,21,23,0.36)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
+                            <Link href={"/calendar"} className="text-[rgba(19,21,23,0.36)] hover:text-[rgb(19,21,23)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
                                 <div className="gap-[.5rem] flex items-center">
                                     <div id="icon">
                                         <CalendarRange className="block w-4 h-4 align-middle" />
@@ -75,7 +75,7 @@ export default function Header() {
                                     <div id="label">Calendars</div>
                                 </div>
                             </Link>
-                            <Link href={"/explore"} className="text-[rgba(19,21,23,0.36)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
+                            <Link href={"/explore"} className="text-[rgba(19,21,23,0.36)] hover:text-[rgb(19,21,23)] pt-1 font-medium transition-all duration-300 ease-in-out cursor-pointer no-underline">
                                 <div className="gap-[.5rem] flex items-center">
                                     <div id="icon">
                                         <Compass className="block w-4 h-4 align-middle" />
