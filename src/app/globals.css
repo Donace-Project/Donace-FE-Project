@@ -81,6 +81,29 @@
   }
 }
 
+.gradient-background {
+  background: linear-gradient(247deg,#f9f392,#20f6e0,#52eefa,#f0ceb2,#7988b5);
+  background-size: 300% 300%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-image{
+  background-image: url(/signin/gradient-light.png);
+}
+
+
 /* .bg-image {
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2897807.jpg&f=1&nofb=1&ipt=5d4945c54cd8d69018672e948c4baf59e26af393316ba42a592cd43d8611ce40&ipo=images");
 } */

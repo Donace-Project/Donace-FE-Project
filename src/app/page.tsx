@@ -5,22 +5,24 @@ import { LoginAPI } from "@/shared/allApiHere";
 import Link from "next/link";
 import React, { Suspense } from "react";
 import { SpinnerInfinity } from 'spinners-react';
+
 const Spline = React.lazy(() => import('@splinetool/react-spline'));
+
 
 export default function Home() {
 
   return (
-    <div id="page-wrapper" className="min-h-[100dvh] bg-[#F4F5F6]">
+    <div id="page-wrapper" className="min-h-[100dvh] gradient-background">
       <div id="container">
         <div className="container min-h-fit py-24">
           <div className="grid grid-cols-12 justify-center items-center">
             <div className="col-span-12 md:col-span-6 lg:col-span-4">
               <div className="my-10 text-center md:text-left">
                 <div className="mb-[1.5rem] ml-[0.3125rem]">
-                  <p className="text-2xl font-bold text-muted-foreground">Donace</p>
+                  <p className="text-2xl font-bold text-[rgba(19,21,23,0.36)]">Donace</p>
                 </div>
                 {/* <p className="text-3xl inline-block my-2">Những sự kiện thú vị</p> */}
-                <h1 className="text-4xl leading-10 font-medium mt-0 mb-4 text-white">
+                <h1 className="text-4xl leading-10 font-medium mt-0 mb-4 text-[rgb(19,21,23)]">
                   <div>
                     Delightful
                     <span className="hidden">&nbsp;</span>
@@ -29,13 +31,13 @@ export default function Home() {
                   </div>
                 </h1>
                 <p className="start-here font-bold inline-block text-3xl">Start here.</p>
-                <p className="my-5 text-lg text-gray-400 font-[1.25rem] max-w-[380px]">Set up an event page, invite friends and sell tickets. Host a memorable event today.</p>
+                <p className="my-5 text-lg text-[rgba(19,21,23,0.82)] font-[1.25rem] max-w-[380px]">Set up an event page, invite friends and sell tickets. Host a memorable event today.</p>
               </div>
               <div className="text-center md:text-left">
-                <Link href={"/create"}>
-                  <Button variant="default">
+                <Link href={"/login"}>
+                  <Button variant="nothing" className="text-[#fff] bg-[#333537] border-[#333537] border border-solid">
                     {/* <p className="text-lg">Tạo event đầu tiên ngay!</p>   */}
-                    <div id="label" className="leading-[1] text-white text-lg m-4 p-4 overflow-hidden  text-ellipsis">
+                    <div id="label" className="leading-[1] text-lg m-4 p-4 overflow-hidden  text-ellipsis">
                       Create Your First Event
                     </div>
                   </Button>
